@@ -1,2 +1,2 @@
-# ggj-2025
+# cadmium blue 2025
 Cadmium Blue is back!

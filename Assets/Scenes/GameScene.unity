@@ -137,7 +137,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &330585544
 AudioListener:
   m_ObjectHideFlags: 0
@@ -268,6 +268,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PhoneCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 1759359036477543223, guid: d3bd9064ec536467da7ff3bc4176710a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3109065993664700049, guid: d3bd9064ec536467da7ff3bc4176710a, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -351,6 +355,10 @@ PrefabInstance:
     - target: {fileID: 3211810949424046858, guid: d3bd9064ec536467da7ff3bc4176710a, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8273599111944569203, guid: d3bd9064ec536467da7ff3bc4176710a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -693,8 +701,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   secondsBetweenMessages: 10
   messages:
-  - {fileID: 11400000, guid: 18033b08c9b6e9e4aac9650043b33d4a, type: 2}
-  - {fileID: 11400000, guid: 64279cacc7e0c38449bab8bbbb197406, type: 2}
+  - {fileID: 11400000, guid: c0b10822488dd5e42a7412425b0a3a21, type: 2}
+  - {fileID: 11400000, guid: bef753abdf7f0154982716f783b52d0e, type: 2}
+  - {fileID: 11400000, guid: cbd903a56b1757c44a52ed7d7225afa7, type: 2}
   messageText: {fileID: 1822104469}
   messagePanel: {fileID: 357472703}
 --- !u!4 &2042082986

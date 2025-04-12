@@ -10,7 +10,6 @@ namespace Script.CameraSystem
         public void ChangeCameraBound(PolygonCollider2D p)
         {
             cameraConfiner.BoundingShape2D = p;
-            cameraConfiner.InvalidateBoundingShapeCache();
         }
     }
 }

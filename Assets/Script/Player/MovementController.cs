@@ -14,6 +14,7 @@ namespace Script.Player
         
         Rigidbody2D PlayerRb;
         private AnimationController playerAnimationController;
+        private SpriteRenderer playerSpriteRenderer;
 
         //get set
         public Vector2 GetLastDirection()
@@ -39,6 +40,8 @@ namespace Script.Player
         {
             PlayerRb = GetComponent<Rigidbody2D>();
             playerAnimationController = GetComponent<AnimationController>();
+            playerSpriteRenderer = GetComponent<SpriteRenderer>();
+            
         }
 
         //call in PlayerController
@@ -52,6 +55,10 @@ namespace Script.Player
             {
                 lastDirectioninput = movementInput;   
             }
+            
+            //flip sprite
+            playerSpriteRenderer.flipX = lastDirectioninput.x < 0;
+            
             
             //get last position of player for facing idle direction
             playerAnimationController.SetAnimParamFloat(lastDirectioninput.x, "LastX");

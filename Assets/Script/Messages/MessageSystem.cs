@@ -42,6 +42,9 @@ public class MessageSystem : MonoBehaviour
     public delegate void OnMessageClose();
     public OnMessageClose onMessageClose;
     
+    public delegate void OnMessageCloseDelayPassed(MessageData messageData);
+    public OnMessageCloseDelayPassed onMessageCloseDelayPassed;
+    
     private void Start()
     {
         messagePanel.SetActive(false);
@@ -59,12 +62,25 @@ public class MessageSystem : MonoBehaviour
         InitializeNextPopUp();
         yield return new WaitForSecondsRealtime(secondsBetweenMessages);
         OpenNextPopUp();
+        
+        float delay = 0;
+        MessageData messageCheck = curMessage;
+        while (delay < curMessage.dismissTime )
+        {
+            if(messageCheck != curMessage)
+                yield break;
+            delay += Time.deltaTime;
+            yield return null;
+        }
+
+        messageText.text = curMessage.messageText;
+        onMessageCloseDelayPassed.Invoke(curMessage);
     }
 
     private void OpenNextPopUp()
     {
         messagePanel.SetActive(true);
-        onMessageOpen.Invoke(curMessage.isBadMessage);
+        onMessageOpen.Invoke(curMessage.ticksAnxiety);
     }
     
     private void InitializeNextPopUp()
@@ -73,7 +89,7 @@ public class MessageSystem : MonoBehaviour
         {
             curMessage = messages[curMessageIndex];
             curMessageIndex++;
-            messageText.text = curMessage.messageText;
+            messageText.text = curMessage.cutoffText;
         }
     }
     
@@ -81,5 +97,10 @@ public class MessageSystem : MonoBehaviour
     {
         messagePanel.SetActive(false);
         onMessageClose.Invoke();
+    }
+
+    public static void ClosePopUp()
+    {
+        Instance.HidePopUp();
     }
 }

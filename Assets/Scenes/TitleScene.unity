@@ -3237,7 +3237,7 @@ MonoBehaviour:
   mainVolSlider: {fileID: 184003481}
   musicVolSlider: {fileID: 1867416767}
   effectsVolSlider: {fileID: 2104505909}
-  exitButton: {fileID: 0}
+  exitButton: {fileID: 440021207}
 --- !u!1 &2023421366
 GameObject:
   m_ObjectHideFlags: 0

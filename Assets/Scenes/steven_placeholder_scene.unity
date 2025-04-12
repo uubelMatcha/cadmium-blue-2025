@@ -131,15 +131,11 @@ GameObject:
   - component: {fileID: 1344272102}
   - component: {fileID: 1344272104}
   - component: {fileID: 1344272106}
-<<<<<<< HEAD
   - component: {fileID: 1344272107}
   - component: {fileID: 1344272110}
   - component: {fileID: 1344272105}
   - component: {fileID: 1344272108}
   - component: {fileID: 1344272109}
-=======
-  - component: {fileID: 1344272105}
->>>>>>> cda1550 (add player movement and input system)
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -204,11 +200,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1344272106}
         m_TargetAssemblyTypeName: Script.Player.MovementController, Assembly-CSharp
-<<<<<<< HEAD
         m_MethodName: GetMovementInput
-=======
-        m_MethodName: Move
->>>>>>> cda1550 (add player movement and input system)
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -338,7 +330,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 10
   movementInput: {x: 0, y: 0}
-<<<<<<< HEAD
+  magnitude: 0
 --- !u!114 &1344272107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -441,8 +433,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerAnim: {fileID: 1344272108}
-=======
->>>>>>> cda1550 (add player movement and input system)
 --- !u!1 &1655111045
 GameObject:
   m_ObjectHideFlags: 0
@@ -470,11 +460,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
   m_LocalScale: {x: 10, y: 10, z: 1}
-=======
-  m_LocalScale: {x: 4, y: 4, z: 1}
->>>>>>> cda1550 (add player movement and input system)
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1344272101}
@@ -528,11 +514,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-<<<<<<< HEAD
   m_Size: {x: 0.32, y: 0.29}
-=======
-  m_Size: {x: 1, y: 1}
->>>>>>> cda1550 (add player movement and input system)
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

@@ -12,5 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f250b25c91383d469194ae98f872e7a, type: 3}
   m_Name: MessageDataTestBad
   m_EditorClassIdentifier: 
+  cutoffText: whe
   messageText: 'Mom: Where are you??'
-  isBadMessage: 1
+  ticksAnxiety: 0
+  characterName: 
+  dismissTime: 5
+  anxietyOnPartialShow: 1
+  anxietyOnFullShow: 10

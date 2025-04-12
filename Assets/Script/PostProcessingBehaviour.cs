@@ -17,7 +17,8 @@ public class PostProcessingBehaviour : MonoBehaviour
     public Color panicColor = Color.red;
     public float panicScaleFactor = 1f;
     public float panicMaxDuration = 10f;
-    public Vector2 panicRange = new Vector2(0.2f, 0.8f);
+    public Vector2 panicVignetteRange = new Vector2(0.2f, 0.8f);
+    public Vector2 panicSpeedRange = new Vector2(1f, 2f);
     private Vignette vignette;
 
     private bool panicMode = false;
@@ -54,14 +55,14 @@ public class PostProcessingBehaviour : MonoBehaviour
         vignette.color.value = panicColor;
 
         float timer = 0f;
-        float beatSpeed = 1f;
+        float beatSpeed = panicSpeedRange.x;
 
         while (timer <= panicMaxDuration) {
 
             float intensity = 1f - (Time.time * beatSpeed - Mathf.Floor(Time.time * beatSpeed));
-            vignette.intensity.value = Mathf.Lerp(panicRange.x, panicRange.y, intensity);
+            vignette.intensity.value = Mathf.Lerp(panicVignetteRange.x, panicVignetteRange.y, intensity);
 
-            beatSpeed = Mathf.Lerp(1f, 3f, timer / panicMaxDuration);
+            beatSpeed = Mathf.Lerp(panicSpeedRange.x, panicSpeedRange.y, timer / panicMaxDuration);
 
             timer += Time.deltaTime;
 

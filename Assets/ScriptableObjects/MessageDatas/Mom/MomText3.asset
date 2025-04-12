@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f250b25c91383d469194ae98f872e7a, type: 3}
   m_Name: MomText3
   m_EditorClassIdentifier: 
-  messageText: 'Are u ok darling? We can talk about it if u need. I will be waiting
-    by the car.  '
+  messageText: I know its hard dear. Come get some lunch. We can talk about it. Please,
+    dear, we have to get going soon.
   isBadMessage: 1
   characterName: Mom

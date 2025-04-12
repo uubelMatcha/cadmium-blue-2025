@@ -25,7 +25,7 @@ public class Interactable : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
 
-        if (other.tag == "Player") {
+        if (other.tag == "PlayerInteractionHitBox") {
             text.SetActive(true);
 
             PlayerInteraction playerInteraction = other.GetComponent<PlayerInteraction>();
@@ -38,7 +38,7 @@ public class Interactable : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other) {
 
 
-        if (other.tag == "Player") {
+        if (other.tag == "PlayerInteractionHitBox") {
             text.SetActive(false);
             PlayerInteraction playerInteraction = other.GetComponent<PlayerInteraction>();
 

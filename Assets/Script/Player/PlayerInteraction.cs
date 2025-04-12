@@ -20,7 +20,7 @@ public class PlayerInteraction : MonoBehaviour
 
     private Vector2 lastDirectionInput;
 
-    private string currentData = null;
+    public string currentData = null;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

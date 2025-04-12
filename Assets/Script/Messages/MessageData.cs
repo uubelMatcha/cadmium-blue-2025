@@ -5,4 +5,6 @@ public class MessageData : ScriptableObject
 {
     public string messageText;
     public bool isBadMessage;
+
+    public string characterName;
 }

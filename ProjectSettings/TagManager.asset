@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - LevelManager
+  - Director
   layers:
   - Default
   - TransparentFX
@@ -55,6 +57,9 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 4170708593
+    locked: 0
+  - name: Environment_Above_Player
+    uniqueID: 1337385317
     locked: 0
   m_RenderingLayers:
   - Default

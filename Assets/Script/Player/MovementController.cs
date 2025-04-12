@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 using System;
+=======
+>>>>>>> cda1550 (add player movement and input system)
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -9,6 +12,7 @@ namespace Script.Player
         [SerializeField] private float moveSpeed = 15f;
         //Set serializeField for debugging inputs
         [SerializeField] private Vector2 movementInput;
+<<<<<<< HEAD
         private Vector2 lastDirectioninput;
         [SerializeField] private float magnitude;
         
@@ -66,9 +70,29 @@ namespace Script.Player
         }
 
         public void GetMovementInput(InputAction.CallbackContext context)
+=======
+        
+        Rigidbody2D playerRB;
+        void Start()
+        {
+            playerRB = GetComponent<Rigidbody2D>();
+        }
+
+        // Update is called once per frame
+        void FixedUpdate()
+        {
+            playerRB.linearVelocity = movementInput * moveSpeed;
+        }
+
+        public void Move(InputAction.CallbackContext context)
+>>>>>>> cda1550 (add player movement and input system)
         {
                 movementInput = context.ReadValue<Vector2>();
             
         }
+<<<<<<< HEAD
+=======
+        
+>>>>>>> cda1550 (add player movement and input system)
     }
 }

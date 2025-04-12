@@ -15,13 +15,16 @@ public class AnxietySystem : MonoBehaviour
     
     private bool isTickingAnxiety = false;
     private int curIgnoreClicks = 0;
+    private bool hasMissedDelay = false;
     
     private void Start()
     {
         ignoreButton.gameObject.SetActive(false);
         MessageSystem.Instance.onMessageOpen += OnMessageOpen;
+        MessageSystem.Instance.onMessageClose += ResetSystem;
+        MessageSystem.Instance.onMessageCloseDelayPassed += OnMessageCloseDelayPassed;
     }
-
+    
     private void OnMessageOpen(bool isBadMessage)
     {
         isTickingAnxiety = true;
@@ -48,20 +51,33 @@ public class AnxietySystem : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                curIgnoreClicks++;
-                TickAnxietyDown();
+                if (hasMissedDelay)
+                {
+                    MessageSystem.ClosePopUp();
+                }
+                else
+                {
+                    curIgnoreClicks++;
+                    TickAnxietyDown();
+                }
             }
         }
     }
 
     private void TickAnxietyUp()
     {
-        anxietySlider.value += anxietyDamagePerSecond;
+        anxietySlider.value += anxietyDamagePerSecond * Time.deltaTime;
     }
 
     private void TickAnxietyDown()
     {
-        anxietySlider.value -= ignoreHealPerSecond;
+        anxietySlider.value -= ignoreHealPerSecond * Time.deltaTime;
+    }
+    
+    private void OnMessageCloseDelayPassed(MessageData messagedata)
+    {
+        anxietySlider.value += messagedata.anxietyOnFullShow;
+        hasMissedDelay = true;
     }
     
     private void CheckIgnoreClicks()
@@ -70,11 +86,12 @@ public class AnxietySystem : MonoBehaviour
         {
             if (!isTickingAnxiety)
             {
+                isTickingAnxiety = false;
+                curIgnoreClicks = 0;
                 Debug.LogError("Ignore clicks reached threshold, but anxiety system should be inactive");
             }
 
-            ResetSystem();
-            MessageSystem.Instance.onMessageClose.Invoke();
+            MessageSystem.ClosePopUp();
         }  
     }
 }

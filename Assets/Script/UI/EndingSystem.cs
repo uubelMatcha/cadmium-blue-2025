@@ -46,6 +46,11 @@ public class EndingSystem : MonoBehaviour
 
         FindFirstObjectByType<MovementController>().locked = true;
 
+        if (AudioManager.audioManagerInstance)
+        {
+            AudioManager.audioManagerInstance.ChangeBGM("Ghost");
+        }
+        
         float sliderStartValue = anxietySlider.value;
         float sliderCurrentValue = sliderStartValue;
 
@@ -104,8 +109,12 @@ public class EndingSystem : MonoBehaviour
     }
 
 
-    private IEnumerator MomTextScene() {
-
+    private IEnumerator MomTextScene()
+    {
+        if (AudioManager.audioManagerInstance)
+        {
+            AudioManager.audioManagerInstance.ChangeBGM("Pinecone_Jelly");
+        }
 
         messageText.text = textsToMom[0];
         characterName.text = "Mom";

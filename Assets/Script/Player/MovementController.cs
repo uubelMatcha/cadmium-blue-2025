@@ -16,6 +16,8 @@ namespace Script.Player
         private AnimationController playerAnimationController;
         private SpriteRenderer playerSpriteRenderer;
 
+        public bool locked = false;
+
         //get set
         public Vector2 GetLastDirection()
         {
@@ -46,6 +48,10 @@ namespace Script.Player
         //call in PlayerController
         public void Move()
         {
+            if (locked) {
+                return;
+            }
+            
             PlayerRb.linearVelocity = movementInput * moveSpeed;
             magnitude = PlayerRb.linearVelocity.magnitude;
             

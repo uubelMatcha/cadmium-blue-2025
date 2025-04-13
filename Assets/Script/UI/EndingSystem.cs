@@ -36,17 +36,6 @@ public class EndingSystem : MonoBehaviour
     };
 
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void StartEnding() {
 
@@ -55,8 +44,7 @@ public class EndingSystem : MonoBehaviour
     
     private IEnumerator GhostBoyDialogue() {
 
-        // FindFirstObjectByType<MovementController>().enabled = false;
-        // FindFirstObjectByType<AnxietySystem>().gameObject.SetActive(false);
+        FindFirstObjectByType<MovementController>().locked = true;
 
         float sliderStartValue = anxietySlider.value;
         float sliderCurrentValue = sliderStartValue;
@@ -83,21 +71,15 @@ public class EndingSystem : MonoBehaviour
                     sliderCurrentValue = targetValue;
                 }
                 dialogueIndex += 1;
-                Debug.Log(dialogueIndex);
+                // Debug.Log(dialogueIndex);
             }
-
             yield return null;
-
         }
-
-        StartCoroutine(FadeScreenOut());
-
-        
+        StartCoroutine(FadeScreenOut());  
     }
 
 
     private IEnumerator LerpAnxiety(float start, float end) {
-
 
         float timer = 0f;
 
@@ -107,25 +89,18 @@ public class EndingSystem : MonoBehaviour
             timer += Time.deltaTime;
             yield return null;
         }
-
     }
 
     private IEnumerator FadeScreenOut() {
-
-
         float timer = 0f;
-
         while (timer < 2f) {
 
             blackScreen.color = new Color(0f,0f,0f, timer / 2f);
 
             timer += Time.deltaTime;
             yield return null;
-
         }
-
         StartCoroutine(MomTextScene());
-
     }
 
 
@@ -141,28 +116,19 @@ public class EndingSystem : MonoBehaviour
         int i = 0;
 
         while (i < 2) {
-
             if (Input.GetKeyDown(KeyCode.Space)) {
-                
                 if (i == 0) {
                     messageText.text = textsToMom[1];
                 }
                 if (i == 1) {
                     StartCoroutine(messageSystem.SlidePhone(0f,-1000f));
                 }
-
                 i += 1;
-
             }
-
             yield return null;
-
         }
-
         yield return new WaitForSeconds(2f);
-
         SceneManager.LoadScene("CreditsScene");
-
     }
 
 }

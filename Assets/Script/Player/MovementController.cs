@@ -52,14 +52,6 @@ namespace Script.Player
             //Set last dir to player input
             if (movementInput.x != 0 || movementInput.y != 0)
             {
-<<<<<<< HEAD
-                lastDirectioninput = movementInput; 
-                // AudioManager.audioManagerInstance.PlayFootsteps(true);
-            }
-            else
-            {
-                // AudioManager.audioManagerInstance.PlayFootsteps(false);
-=======
                 lastDirectioninput = movementInput;
                 if (AudioManager.audioManagerInstance)
                 {
@@ -72,7 +64,6 @@ namespace Script.Player
                 {
                     AudioManager.audioManagerInstance.PlayFootsteps(false);
                 }
->>>>>>> 8dc1cd69ad7e60cb9f3c277e61c0d8958ec4a11b
             }
             
             //flip sprite

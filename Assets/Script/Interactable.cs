@@ -6,26 +6,7 @@ public class Interactable : MonoBehaviour
 
     public GameObject text;
     public InteractableData data;
-<<<<<<< HEAD
 
-
-    // // Start is called once before the first execution of Update after the MonoBehaviour is created
-    // void Start()
-    // {
-        
-    // }
-
-    // // Update is called once per frame
-    // void Update()
-    // {
-        
-    // }
-
-
-
-=======
-    
->>>>>>> 8dc1cd69ad7e60cb9f3c277e61c0d8958ec4a11b
     private void OnTriggerEnter2D(Collider2D other) {
 
         if (other.tag == "PlayerInteractionHitBox") {

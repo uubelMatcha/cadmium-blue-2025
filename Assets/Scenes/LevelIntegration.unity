@@ -739,6 +739,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5283607822220241913, guid: 932d95362c468014f9875f700f35261e, type: 3}
+      propertyPath: m_Size.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5283607822220241913, guid: 932d95362c468014f9875f700f35261e, type: 3}
+      propertyPath: m_Size.y
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6073025777733852004, guid: 932d95362c468014f9875f700f35261e, type: 3}
       propertyPath: m_LocalScale.x
       value: 50

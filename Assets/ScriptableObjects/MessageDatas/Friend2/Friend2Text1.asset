@@ -12,7 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f250b25c91383d469194ae98f872e7a, type: 3}
   m_Name: Friend2Text1
   m_EditorClassIdentifier: 
+  cutoffText: 
   messageText: "Heyyyyy what are you up to! We\u2019re going to the train tracks
     later. Devon knows a spot where they have old TVs we can smash up. Wanna come?"
-  isBadMessage: 0
+  ticksAnxiety: 0
+  profilePicture: {fileID: 21300000, guid: f5e269e52eb89a142952f1157efbc5e5, type: 3}
   characterName: Mariana
+  dismissTime: 2
+  anxietyOnPartialShow: 1
+  anxietyOnFullShow: 1

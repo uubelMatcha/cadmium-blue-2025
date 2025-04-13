@@ -12,7 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f250b25c91383d469194ae98f872e7a, type: 3}
   m_Name: Friend2Text3
   m_EditorClassIdentifier: 
+  cutoffText: 
   messageText: "The TVs are SO SMASHABLE. You\u2019re missing out :\u2019\u2019(
     but we can go again another time! How r u??"
-  isBadMessage: 0
+  ticksAnxiety: 0
+  profilePicture: {fileID: 21300000, guid: f5e269e52eb89a142952f1157efbc5e5, type: 3}
   characterName: Mariana
+  dismissTime: 2
+  anxietyOnPartialShow: 1
+  anxietyOnFullShow: 1

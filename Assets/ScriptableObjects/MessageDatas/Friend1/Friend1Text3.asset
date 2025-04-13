@@ -12,7 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f250b25c91383d469194ae98f872e7a, type: 3}
   m_Name: Friend1Text3
   m_EditorClassIdentifier: 
+  cutoffText: 
   messageText: 'Nah its cool forget about the last message. Anyway do u wanna get
     pizza when u get back '
-  isBadMessage: 0
+  ticksAnxiety: 0
+  profilePicture: {fileID: 21300000, guid: 449970d4e34b37940b9e0c42aacc3f03, type: 3}
   characterName: Tony
+  dismissTime: 2
+  anxietyOnPartialShow: 1
+  anxietyOnFullShow: 1

@@ -38,6 +38,7 @@ public class MessageSystem : MonoBehaviour
     [SerializeField] private GameObject messagePanel;
     [SerializeField] private GameObject notificationPopup;
     [SerializeField] private Image profilePictureImage;
+    [SerializeField] private TextMeshProUGUI characterName;
 
 
     [SerializeField] private float slideTime = 0.5f;
@@ -102,8 +103,10 @@ public class MessageSystem : MonoBehaviour
             curMessage = messages[curMessageIndex];
             curMessageIndex++;
             messageText.text = curMessage.cutoffText;
+
             // Debug.Log(curMessage.profilePicture);
             profilePictureImage.sprite = curMessage.profilePicture;
+            characterName.text = curMessage.characterName;
         }
     }
     

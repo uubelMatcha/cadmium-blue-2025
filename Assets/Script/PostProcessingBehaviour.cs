@@ -9,11 +9,9 @@ public class PostProcessingBehaviour : MonoBehaviour
 {
 
 
-    public Volume volume;
+    private Volume volume;
 
-    public AnxietySystem anxietySystem;
-
-    public float anxiety = 0f;
+    private AnxietySystem anxietySystem;
 
     public Color passiveColor = Color.black;
     public Color panicColor = Color.red;
@@ -26,6 +24,8 @@ public class PostProcessingBehaviour : MonoBehaviour
     // public float beatSpeed = 2f;
     private Vignette vignette;
 
+    private ColorAdjustments colorAdjustments;
+
     public bool panicMode = false;
 
 
@@ -34,24 +34,33 @@ public class PostProcessingBehaviour : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Vignette tmp;
-        if (volume.profile.TryGet<Vignette>(out tmp))
+        volume = GetComponent<Volume>();
+        anxietySystem = FindFirstObjectByType<AnxietySystem>();
+
+        Vignette tmpVignette;
+        if (volume.profile.TryGet<Vignette>(out tmpVignette))
         {
-            vignette = tmp;
+            vignette = tmpVignette;
         }
 
-        // StartCoroutine(HeartBeatEffect());
+        ColorAdjustments tmpColorAdjustments;
+        if (volume.profile.TryGet<ColorAdjustments>(out tmpColorAdjustments))
+        {
+            colorAdjustments = tmpColorAdjustments;
+        }
+
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        anxiety = Mathf.Lerp(passiveVignetteRange.x, passiveVignetteRange.y, anxietySystem.anxietyLevel);
-
         if (panicMode == false) {
-            vignette.intensity.value = anxiety;
+            vignette.intensity.value = Mathf.Lerp(passiveVignetteRange.x, passiveVignetteRange.y, anxietySystem.anxietyLevel);
         }
+
+        colorAdjustments.saturation.value = -100 * anxietySystem.anxietyLevel;
+        colorAdjustments.postExposure.value = -1 * anxietySystem.anxietyLevel;
     }
 
 
@@ -85,7 +94,7 @@ public class PostProcessingBehaviour : MonoBehaviour
         }
 
         vignette.color.value = passiveColor;
-        vignette.intensity.value = anxiety;
+        vignette.intensity.value = anxietySystem.anxietyLevel;
         panicMode = false;
 
     }

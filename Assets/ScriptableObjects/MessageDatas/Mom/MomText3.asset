@@ -15,7 +15,7 @@ MonoBehaviour:
   cutoffText: 
   messageText: I know its hard dear. Come get some lunch. We can talk about it. Please,
     dear, we have to get going soon.
-  ticksAnxiety: 0
+  ticksAnxiety: 1
   profilePicture: {fileID: 21300000, guid: be1699c8a1e7944b3be788f9552b7186, type: 3}
   characterName: Mom
   dismissTime: 2

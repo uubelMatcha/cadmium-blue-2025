@@ -15,7 +15,7 @@ MonoBehaviour:
   cutoffText: 
   messageText: Honey, where did you go? We r checking out at 2pm. I have pinecone
     jelly sandwiches ready for you. xoxo
-  ticksAnxiety: 0
+  ticksAnxiety: 1
   profilePicture: {fileID: 21300000, guid: be1699c8a1e7944b3be788f9552b7186, type: 3}
   characterName: Mom
   dismissTime: 2

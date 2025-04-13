@@ -12,7 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f250b25c91383d469194ae98f872e7a, type: 3}
   m_Name: Friend3Text1
   m_EditorClassIdentifier: 
+  cutoffText: 
   messageText: Hey thanks for the help with the assignment. I got a B+ lol amazing
     :)) I have another test coming up, do u want to study next week?
-  isBadMessage: 0
+  ticksAnxiety: 0
+  profilePicture: {fileID: 21300000, guid: 902ca79d1d9e0d0458350d583894de92, type: 3}
   characterName: Janine
+  dismissTime: 2
+  anxietyOnPartialShow: 1
+  anxietyOnFullShow: 1

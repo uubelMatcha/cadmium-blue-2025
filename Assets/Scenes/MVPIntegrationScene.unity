@@ -1433,6 +1433,14 @@ PrefabInstance:
       propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5663918759891338320, guid: d3bd9064ec536467da7ff3bc4176710a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9184942707553671290, guid: d3bd9064ec536467da7ff3bc4176710a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0cd971d900903d94a902142965a93922, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5066,12 +5074,12 @@ MonoBehaviour:
   anxietyDamagePerSecond: 5
   ignoreHealPerSecond: 1.2
   thresholdEvents: []
+  anxietyLevel: 0
   anxietySlider: {fileID: 357472704}
   ignoreButton: {fileID: 357472702}
   ignoreButtonCompletionMask: {fileID: 1315824889}
   maxIgnoreButtonScale: 1.5
   ignoreButtonRelaxTime: 0.25
-  anxietyLevel: 0
 --- !u!114 &2042082985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5743,10 +5751,6 @@ PrefabInstance:
       propertyPath: anxietySystem
       value: 
       objectReference: {fileID: 2042082984}
-    - target: {fileID: 3586942817408283792, guid: 5a0ed4552948ba44981231cc79e5493e, type: 3}
-      propertyPath: passiveVignetteRange.y
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 8222564554430593694, guid: 5a0ed4552948ba44981231cc79e5493e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

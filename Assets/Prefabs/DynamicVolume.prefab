@@ -63,10 +63,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   volume: {fileID: 4298769989715721432}
+  anxietySystem: {fileID: 0}
   anxiety: 0
   passiveColor: {r: 0, g: 0, b: 0, a: 1}
   panicColor: {r: 0.7132075, g: 0.06324667, b: 0.06324667, a: 1}
   panicScaleFactor: 1
   panicMaxDuration: 10
+  passiveVignetteRange: {x: 0, y: 0.5}
   panicVignetteRange: {x: 0.2, y: 0.5}
-  panicSpeedRange: {x: 1.5, y: 2.5}
+  panicMode: 0

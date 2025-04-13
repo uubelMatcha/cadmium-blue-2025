@@ -72,7 +72,6 @@ public class MessageSystem : MonoBehaviour
 
         // Notification popup
         notificationPopup.SetActive(true);
-
         while (delay < curMessage.dismissTime )
         {
             if(messageCheck != curMessage)
@@ -80,7 +79,6 @@ public class MessageSystem : MonoBehaviour
             delay += Time.deltaTime;
             yield return null;
         }
-
         notificationPopup.SetActive(false);
 
 

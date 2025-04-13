@@ -75,6 +75,9 @@ public class AnxietySystem : MonoBehaviour
     [SerializeField] private float anxietyDamagePerSecond = 1f;
     [SerializeField] private float ignoreHealPerSecond = 1.2f;
     [SerializeField] List<ThresholdEvents> thresholdEvents = new List<ThresholdEvents>();
+
+    public float anxietyLevel;
+
     
     [Header("UI Elements")]
     [SerializeField] private Slider anxietySlider;
@@ -82,14 +85,13 @@ public class AnxietySystem : MonoBehaviour
     [SerializeField] private RectTransform ignoreButtonCompletionMask;
 
 
-    public float maxIgnoreButtonScale = 1.5f;
-    public float ignoreButtonRelaxTime = 0.25f;
+    [SerializeField] private float maxIgnoreButtonScale = 1.5f;
+    [SerializeField] private float ignoreButtonRelaxTime = 0.25f;
     
     private bool isTickingAnxiety = false;
     private int curIgnoreClicks = 0;
     private bool hasMissedDelay = false;
 
-    public float anxietyLevel;
 
     private PostProcessingBehaviour postProcessingBehaviour;
     

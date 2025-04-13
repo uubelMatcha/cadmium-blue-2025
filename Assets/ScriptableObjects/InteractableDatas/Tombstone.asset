@@ -16,3 +16,4 @@ MonoBehaviour:
   level1: 
   level2: 
   level3: 
+  sfx: {fileID: 11400000, guid: 4f0b04ef6178cca44a9ccf76b0aef680, type: 2}

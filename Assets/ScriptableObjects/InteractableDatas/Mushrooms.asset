@@ -19,3 +19,4 @@ MonoBehaviour:
     kill you, like, immediately? "
   level3: "Weird, slimy, kinda freaky\u2026 I wonder if these will grow where he\u2026
     Mmm ;-; "
+  sfx: {fileID: 11400000, guid: 1ba32851ef3a6264f97e5c364222555e, type: 2}

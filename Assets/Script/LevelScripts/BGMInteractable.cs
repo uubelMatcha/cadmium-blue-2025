@@ -15,7 +15,10 @@ namespace Script.LevelScripts
             if (other.CompareTag("Player"))
             {
                 //triggerBGM.Invoke(bgmTitle);
-                AudioManager.audioManagerInstance.ChangeBGM(bgmTitle);
+                if (AudioManager.audioManagerInstance)
+                {
+                    AudioManager.audioManagerInstance.ChangeBGM(bgmTitle);
+                }
             }
         }
     }

@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -22,7 +23,7 @@ public class AudioManager : MonoBehaviour
 
     public void ChangeBGM(string bgmTitle)
     {
-        SoundData desiredBGM = GetBGM(bgmTitle);
+        SoundData desiredBGM = GetSound(bgmTitle, bgmList);
         if(currentBGM != desiredBGM)
         {
             bgmSource.clip = desiredBGM.audioClip;
@@ -30,10 +31,18 @@ public class AudioManager : MonoBehaviour
             currentBGM = desiredBGM;
         }
     }
-
-    private SoundData GetBGM(string title)
+    
+    //coroutine to trigger a sound effect
+    public IEnumerator PlaySoundEffect(string sfxTitle)
     {
-        foreach(SoundData bgm in bgmList)
+        SoundData desiredSfx = GetSound(sfxTitle, sfxList);
+        sfxSource.PlayOneShot(desiredSfx.audioClip);
+        yield return new WaitForSeconds(1f);
+    }
+
+    private SoundData GetSound(string title, List<SoundData> dataBank)
+    {
+        foreach(SoundData bgm in dataBank)
         {
             if (bgm.musicTitle == title) return bgm;
         }
@@ -42,5 +51,4 @@ public class AudioManager : MonoBehaviour
             throw new Exception("music title not found. Was the right title defined?");
         }
     }
-
 }

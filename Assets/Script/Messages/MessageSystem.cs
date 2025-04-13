@@ -123,7 +123,7 @@ public class MessageSystem : MonoBehaviour
     }
 
 
-    private IEnumerator SlidePhone(float start, float end) {
+    public IEnumerator SlidePhone(float start, float end) {
 
         float timer = 0f;
 

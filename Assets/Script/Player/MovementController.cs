@@ -55,11 +55,11 @@ namespace Script.Player
             if (movementInput.x != 0 || movementInput.y != 0)
             {
                 lastDirectioninput = movementInput; 
-                AudioManager.audioManagerInstance.PlayFootsteps(true);
+                // AudioManager.audioManagerInstance.PlayFootsteps(true);
             }
             else
             {
-                AudioManager.audioManagerInstance.PlayFootsteps(false);
+                // AudioManager.audioManagerInstance.PlayFootsteps(false);
             }
             
             //flip sprite

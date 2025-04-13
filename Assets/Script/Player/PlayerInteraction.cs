@@ -6,6 +6,8 @@ using TMPro;
 using System.Collections;
 using System.Threading;
 using System;
+using System.Linq;
+using JetBrains.Annotations;
 
 public class PlayerInteraction : MonoBehaviour
 {
@@ -21,6 +23,10 @@ public class PlayerInteraction : MonoBehaviour
     private Vector2 lastDirectionInput;
 
     public string currentData = null;
+
+    public bool ghostBoyIsTarget = false;
+    private bool endingInProgress = false;
+
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -55,6 +61,16 @@ public class PlayerInteraction : MonoBehaviour
 
         // Debug.Log("E was pressed");
 
+
+        if (ghostBoyIsTarget && !endingInProgress) {
+            // Disable movement
+          
+            FindFirstObjectByType<EndingSystem>().StartEnding();
+            endingInProgress = true;
+
+        }
+
+
         if (currentData == null) {
             // Debug.Log("Data is null");
             return;
@@ -85,5 +101,7 @@ public class PlayerInteraction : MonoBehaviour
         flavorTextUI.SetActive(false);
 
     }
+
+
 
 }

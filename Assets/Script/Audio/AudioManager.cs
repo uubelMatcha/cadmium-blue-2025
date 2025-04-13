@@ -7,6 +7,8 @@ public class AudioManager : MonoBehaviour
 {
     [SerializeField] private AudioSource bgmSource;
 
+    [SerializeField] private AudioSource anxietySource;
+    
     [SerializeField] private AudioSource sfxSource;
     
     [SerializeField] private AudioSource footstepsSource;
@@ -20,6 +22,8 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private SoundData currentBGM;
 
     public static AudioManager audioManagerInstance;
+
+    private float originalBGVolume = 0.5f;
     
     private void Awake()
     {
@@ -33,7 +37,12 @@ public class AudioManager : MonoBehaviour
         }
         //DontDestroyOnLoad(gameObject);
     }
-    
+
+    private void Start()
+    {
+        originalBGVolume = bgmSource.volume;
+    }
+
     public void ChangeBGM(string bgmTitle)
     {
         SoundData desiredBGM = GetSound(bgmTitle, bgmList);
@@ -42,6 +51,22 @@ public class AudioManager : MonoBehaviour
             bgmSource.clip = desiredBGM.audioClip;
             bgmSource.Play();
             currentBGM = desiredBGM;
+        }
+    }
+    
+    public void PlayAnxietyMusic(string bgmTitle, bool enable)
+    {
+        SoundData desiredBGM = GetSound(bgmTitle, bgmList);
+        if(currentBGM != desiredBGM && enable)
+        {
+            bgmSource.volume = 0.01f;
+            anxietySource.clip = desiredBGM.audioClip;
+            anxietySource.Play();
+        }
+        else if(!enable)
+        {
+            bgmSource.volume = originalBGVolume;
+            anxietySource.Stop();
         }
     }
     

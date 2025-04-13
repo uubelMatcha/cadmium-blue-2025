@@ -113,7 +113,7 @@ public class AnxietySystem : MonoBehaviour
             isTickingAnxiety = true;
             if (AudioManager.audioManagerInstance)
             {
-                AudioManager.audioManagerInstance.ChangeBGM("Anxiety");
+                AudioManager.audioManagerInstance.PlayAnxietyMusic("Anxiety", true);
             }
             StartCoroutine(postProcessingBehaviour.HeartBeatEffect());
             ignoreButton.gameObject.SetActive(true);
@@ -128,7 +128,7 @@ public class AnxietySystem : MonoBehaviour
         isTickingAnxiety = false;
         if (AudioManager.audioManagerInstance)
         {
-            AudioManager.audioManagerInstance.ChangeBGM("At_The_Campsite");
+            AudioManager.audioManagerInstance.PlayAnxietyMusic("Anxiety", false);
         }
         messageOpen = false;
         ignoreButton.gameObject.SetActive(false);

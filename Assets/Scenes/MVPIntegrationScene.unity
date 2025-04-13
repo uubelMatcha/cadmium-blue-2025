@@ -2975,7 +2975,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &1269098326
+--- !u!1001 &1258756403
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -2983,55 +2983,55 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1474100670600041662, guid: 2f62c46d53ef5c34885c9a62e0a529f1, type: 3}
+    - target: {fileID: 5597864272305141634, guid: 2e39bbe97f55eaa418deb91ebdf92c16, type: 3}
+      propertyPath: m_Name
+      value: InteractiblesLayout
+      objectReference: {fileID: 0}
+    - target: {fileID: 6139305716826707103, guid: 2e39bbe97f55eaa418deb91ebdf92c16, type: 3}
       propertyPath: m_LocalPosition.x
       value: -137.18683
       objectReference: {fileID: 0}
-    - target: {fileID: 1474100670600041662, guid: 2f62c46d53ef5c34885c9a62e0a529f1, type: 3}
+    - target: {fileID: 6139305716826707103, guid: 2e39bbe97f55eaa418deb91ebdf92c16, type: 3}
       propertyPath: m_LocalPosition.y
       value: -14.327345
       objectReference: {fileID: 0}
-    - target: {fileID: 1474100670600041662, guid: 2f62c46d53ef5c34885c9a62e0a529f1, type: 3}
+    - target: {fileID: 6139305716826707103, guid: 2e39bbe97f55eaa418deb91ebdf92c16, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 29.24
       objectReference: {fileID: 0}
-    - target: {fileID: 1474100670600041662, guid: 2f62c46d53ef5c34885c9a62e0a529f1, type: 3}
+    - target: {fileID: 6139305716826707103, guid: 2e39bbe97f55eaa418deb91ebdf92c16, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1474100670600041662, guid: 2f62c46d53ef5c34885c9a62e0a529f1, type: 3}
+    - target: {fileID: 6139305716826707103, guid: 2e39bbe97f55eaa418deb91ebdf92c16, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1474100670600041662, guid: 2f62c46d53ef5c34885c9a62e0a529f1, type: 3}
+    - target: {fileID: 6139305716826707103, guid: 2e39bbe97f55eaa418deb91ebdf92c16, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1474100670600041662, guid: 2f62c46d53ef5c34885c9a62e0a529f1, type: 3}
+    - target: {fileID: 6139305716826707103, guid: 2e39bbe97f55eaa418deb91ebdf92c16, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1474100670600041662, guid: 2f62c46d53ef5c34885c9a62e0a529f1, type: 3}
+    - target: {fileID: 6139305716826707103, guid: 2e39bbe97f55eaa418deb91ebdf92c16, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1474100670600041662, guid: 2f62c46d53ef5c34885c9a62e0a529f1, type: 3}
+    - target: {fileID: 6139305716826707103, guid: 2e39bbe97f55eaa418deb91ebdf92c16, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1474100670600041662, guid: 2f62c46d53ef5c34885c9a62e0a529f1, type: 3}
+    - target: {fileID: 6139305716826707103, guid: 2e39bbe97f55eaa418deb91ebdf92c16, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5447630934400190875, guid: 2f62c46d53ef5c34885c9a62e0a529f1, type: 3}
-      propertyPath: m_Name
-      value: Interactable
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2f62c46d53ef5c34885c9a62e0a529f1, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 2e39bbe97f55eaa418deb91ebdf92c16, type: 3}
 --- !u!1 &1374860714
 GameObject:
   m_ObjectHideFlags: 0
@@ -5037,6 +5037,7 @@ MonoBehaviour:
   messagePanel: {fileID: 357472703}
   notificationPopup: {fileID: 0}
   profilePictureImage: {fileID: 0}
+  characterName: {fileID: 0}
   slideTime: 0.5
 --- !u!4 &2042082986
 Transform:
@@ -5805,4 +5806,4 @@ SceneRoots:
   - {fileID: 856797482}
   - {fileID: 2042082986}
   - {fileID: 1977672548}
-  - {fileID: 1269098326}
+  - {fileID: 1258756403}

@@ -2339,7 +2339,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Cynical Anxious Fox
+  m_text: Fox, Lost
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f2f17d8abd5fd7e4090d8488ebf50af5, type: 2}
   m_sharedMaterial: {fileID: 7297424025434873495, guid: f2f17d8abd5fd7e4090d8488ebf50af5, type: 2}

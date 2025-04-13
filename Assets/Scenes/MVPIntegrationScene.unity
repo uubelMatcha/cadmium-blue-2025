@@ -1349,6 +1349,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PhoneCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 1759359036477543223, guid: d3bd9064ec536467da7ff3bc4176710a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3109065993664700049, guid: d3bd9064ec536467da7ff3bc4176710a, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1436,6 +1440,10 @@ PrefabInstance:
     - target: {fileID: 5663918759891338320, guid: d3bd9064ec536467da7ff3bc4176710a, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8273599111944569203, guid: d3bd9064ec536467da7ff3bc4176710a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9184942707553671290, guid: d3bd9064ec536467da7ff3bc4176710a, type: 3}
       propertyPath: m_Sprite
@@ -2987,6 +2995,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: InteractiblesLayout
       objectReference: {fileID: 0}
+    - target: {fileID: 5597864272305141634, guid: 2e39bbe97f55eaa418deb91ebdf92c16, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6139305716826707103, guid: 2e39bbe97f55eaa418deb91ebdf92c16, type: 3}
       propertyPath: m_LocalPosition.x
       value: -137.18683
@@ -3866,6 +3878,10 @@ PrefabInstance:
     - target: {fileID: 7300943161546798777, guid: b6a4a8bbd819347ed83f8ff8580e5cf8, type: 3}
       propertyPath: m_Name
       value: Director
+      objectReference: {fileID: 0}
+    - target: {fileID: 7300943161546798777, guid: b6a4a8bbd819347ed83f8ff8580e5cf8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7661060201609659484, guid: b6a4a8bbd819347ed83f8ff8580e5cf8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5584,6 +5600,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 19271887733207854, guid: dcf0bdeee3adcc846991fb6ccdcc0e49, type: 3}
+      propertyPath: m_ColliderPaths.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7838101784088006869, guid: dcf0bdeee3adcc846991fb6ccdcc0e49, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8470648345498499588, guid: dcf0bdeee3adcc846991fb6ccdcc0e49, type: 3}
       propertyPath: m_LocalPosition.x
       value: -81.974236
@@ -5627,6 +5651,10 @@ PrefabInstance:
     - target: {fileID: 8902697877315364155, guid: dcf0bdeee3adcc846991fb6ccdcc0e49, type: 3}
       propertyPath: m_Name
       value: Background
+      objectReference: {fileID: 0}
+    - target: {fileID: 8902697877315364155, guid: dcf0bdeee3adcc846991fb6ccdcc0e49, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5725,6 +5753,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogueCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 8854313219400772076, guid: 31e8a103775dae541b7df07fea048700, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5741,6 +5773,10 @@ PrefabInstance:
     - target: {fileID: 2960122142158979379, guid: 5a0ed4552948ba44981231cc79e5493e, type: 3}
       propertyPath: m_Name
       value: DynamicVolume
+      objectReference: {fileID: 0}
+    - target: {fileID: 2960122142158979379, guid: 5a0ed4552948ba44981231cc79e5493e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3586942817408283792, guid: 5a0ed4552948ba44981231cc79e5493e, type: 3}
       propertyPath: anxietySystem

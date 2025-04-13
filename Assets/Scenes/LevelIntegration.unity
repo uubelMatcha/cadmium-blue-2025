@@ -19602,7 +19602,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2372390101068698766, guid: a67b6bc5cd8cd104d97ac2a773a393d6, type: 3}
       propertyPath: m_Volume
-      value: 0.5
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21405,7 +21405,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clicksUntilCloseMessage: 20
-  anxietyDamagePerSecond: 10
+  anxietyDamagePerSecond: 7.5
   ignoreHealPerSecond: 1.2
   thresholdEvents: []
   anxietyLevel: 0

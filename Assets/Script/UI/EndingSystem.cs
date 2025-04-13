@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Linq;
-using Microsoft.Unity.VisualStudio.Editor;
 using Script.Player;
 using TMPro;
 using UnityEngine;
@@ -113,7 +112,7 @@ public class EndingSystem : MonoBehaviour
     {
         if (AudioManager.audioManagerInstance)
         {
-            AudioManager.audioManagerInstance.ChangeBGM("Pinecone_Jelly");
+            //AudioManager.audioManagerInstance.ChangeBGM("Pinecone_Jelly");
         }
 
         messageText.text = textsToMom[0];

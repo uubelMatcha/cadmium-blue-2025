@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Linq;
-using Microsoft.Unity.VisualStudio.Editor;
 using Script.Player;
 using TMPro;
 using UnityEngine;

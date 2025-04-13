@@ -1,13 +1,7 @@
 using UnityEngine;
 using Script.Player;
-using UnityEditor.U2D.Sprites;
-using NUnit.Framework.Constraints;
 using TMPro;
 using System.Collections;
-using System.Threading;
-using System;
-using System.Linq;
-using JetBrains.Annotations;
 
 public class PlayerInteraction : MonoBehaviour
 {

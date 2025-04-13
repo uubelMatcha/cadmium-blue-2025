@@ -88,6 +88,7 @@ public class AnxietySystem : MonoBehaviour
     [SerializeField] private float maxIgnoreButtonScale = 1.5f;
     [SerializeField] private float ignoreButtonRelaxTime = 0.25f;
     
+    private bool messageOpen = false;
     private bool isTickingAnxiety = false;
     private int curIgnoreClicks = 0;
     private bool hasMissedDelay = false;
@@ -108,18 +109,20 @@ public class AnxietySystem : MonoBehaviour
     
     private void OnMessageOpen(bool isBadMessage)
     {
-        // if (isBadMessage == true) {
-        isTickingAnxiety = true;
-        StartCoroutine(postProcessingBehaviour.HeartBeatEffect());
-        // }
+        if (isBadMessage == true) {
+            isTickingAnxiety = true;
+            StartCoroutine(postProcessingBehaviour.HeartBeatEffect());
+            ignoreButton.gameObject.SetActive(true);
+        }
+        messageOpen = true;
         curIgnoreClicks = 0;
-        ignoreButton.gameObject.SetActive(true);
     }
     
     private void ResetSystem()
     {
         curIgnoreClicks = 0;
         isTickingAnxiety = false;
+        messageOpen = false;
         ignoreButton.gameObject.SetActive(false);
         postProcessingBehaviour.panicMode = false;
 
@@ -137,28 +140,37 @@ public class AnxietySystem : MonoBehaviour
         // checks if the player has clicked ignore enough times
         CheckIgnoreClicks();
         
-        if (isTickingAnxiety)
-        {
-            TickAnxietyUp();
-
-            if (Input.GetKeyDown(KeyCode.Space))
+        if (messageOpen) {
+            if (isTickingAnxiety)
             {
-                // if (hasMissedDelay)
-                // {
-                //     MessageSystem.ClosePopUp();
-                // }
-                // else
-                // {
-                curIgnoreClicks++;
-                // ignoreButtonCompletionSlider.gameObject.transform.localScale = new Vector3(curIgnoreClicks / clicksUntilCloseMessage, 1f, 1f);
-                // Debug.Log(curIgnoreClicks(float) / clicksUntilCloseMessage(float));
-                ignoreButtonCompletionMask.localScale = new Vector3((float)curIgnoreClicks / clicksUntilCloseMessage, 0.2f, 1f);
+                TickAnxietyUp();
 
-                StopCoroutine("PulseIgnoreButton");
-                StartCoroutine("PulseIgnoreButton");
-                // TickAnxietyDown();
-                // }
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    // if (hasMissedDelay)
+                    // {
+                    //     MessageSystem.ClosePopUp();
+                    // }
+                    // else
+                    // {
+                    curIgnoreClicks++;
+                    // ignoreButtonCompletionSlider.gameObject.transform.localScale = new Vector3(curIgnoreClicks / clicksUntilCloseMessage, 1f, 1f);
+                    // Debug.Log(curIgnoreClicks(float) / clicksUntilCloseMessage(float));
+                    ignoreButtonCompletionMask.localScale = new Vector3((float)curIgnoreClicks / clicksUntilCloseMessage, 0.2f, 1f);
+
+                    StopCoroutine("PulseIgnoreButton");
+                    StartCoroutine("PulseIgnoreButton");
+                    // TickAnxietyDown();
+                    // }
+                }
             }
+            else {
+
+                if (Input.GetKeyDown(KeyCode.Space)) {
+                    MessageSystem.ClosePopUp();
+                }
+
+            }   
         }
     }
 
@@ -186,12 +198,16 @@ public class AnxietySystem : MonoBehaviour
     {
         if (curIgnoreClicks >= clicksUntilCloseMessage)
         {
-            if (!isTickingAnxiety)
-            {
-                isTickingAnxiety = false;
-                curIgnoreClicks = 0;
-                Debug.LogError("Ignore clicks reached threshold, but anxiety system should be inactive");
-            }
+            // if (!isTickingAnxiety)
+            // {
+            //     isTickingAnxiety = false;
+            //     curIgnoreClicks = 0;
+            //     Debug.LogError("Ignore clicks reached threshold, but anxiety system should be inactive");
+            // }
+
+            // if (isTickingAnxiety) {
+            //     isTickingAnxiety = false;
+            // }
 
             MessageSystem.ClosePopUp();
         }  
@@ -207,14 +223,8 @@ public class AnxietySystem : MonoBehaviour
             ignoreButton.transform.localScale = new Vector3(scale, scale, 1f);
 
             timer += Time.deltaTime;
-            
-            // if (Input.GetKeyDown(KeyCode.Space))
-            // {
-                // yield break;
-            // }
-            // else {
+
             yield return null;
-            // }
         }
 
     }

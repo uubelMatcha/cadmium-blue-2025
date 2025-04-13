@@ -90,7 +90,7 @@ public class MessageSystem : MonoBehaviour
     private void OpenNextPopUp()
     {
         // messagePanel.SetActive(true);
-        StartCoroutine(SlideUp());
+        StartCoroutine(SlidePhone(-900f, 0f));
         onMessageOpen.Invoke(curMessage.ticksAnxiety);
     }
     
@@ -107,7 +107,7 @@ public class MessageSystem : MonoBehaviour
     private void HidePopUp()
     {
         // messagePanel.SetActive(false);
-        StartCoroutine(SlideDown());
+        StartCoroutine(SlidePhone(0f, -900f));
         onMessageClose.Invoke();
     }
 
@@ -117,34 +117,20 @@ public class MessageSystem : MonoBehaviour
     }
 
 
-    private IEnumerator SlideUp() {
+    private IEnumerator SlidePhone(float start, float end) {
 
         float timer = 0f;
 
         while (timer <= slideTime) {
 
-            float yPos = Mathf.SmoothStep(-900f, 0f, timer / slideTime);
+            float yPos = Mathf.SmoothStep(start, end, timer / slideTime);
             messagePanel.GetComponent<RectTransform>().localPosition = new Vector3(0f, yPos, 0f);
 
             timer += Time.deltaTime;
             yield return null;
         }
-        messagePanel.GetComponent<RectTransform>().localPosition = new Vector3(0f, 0f, 0f);
+        messagePanel.GetComponent<RectTransform>().localPosition = new Vector3(0f, end, 0f);
     }
 
     
-    private IEnumerator SlideDown() {
-
-        float timer = 0f;
-
-        while (timer <= slideTime) {
-
-            float yPos = Mathf.SmoothStep(0, -900f, timer / slideTime);
-            messagePanel.GetComponent<RectTransform>().localPosition = new Vector3(0f, yPos, 0f);
-
-            timer += Time.deltaTime;
-            yield return null;
-        }
-        messagePanel.GetComponent<RectTransform>().localPosition = new Vector3(0f, -900f, 0f);
-    }
 }

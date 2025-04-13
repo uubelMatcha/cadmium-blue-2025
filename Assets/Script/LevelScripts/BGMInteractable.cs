@@ -7,7 +7,6 @@ namespace Script.LevelScripts
 {
     public class BGMInteractable : MonoBehaviour
     {
-        public UnityEvent<string> triggerBGM;
         public string bgmTitle;
         
         //test function for audio switch
@@ -15,7 +14,8 @@ namespace Script.LevelScripts
         {
             if (other.CompareTag("Player"))
             {
-                triggerBGM.Invoke(bgmTitle);
+                //triggerBGM.Invoke(bgmTitle);
+                AudioManager.audioManagerInstance.ChangeBGM(bgmTitle);
             }
         }
     }

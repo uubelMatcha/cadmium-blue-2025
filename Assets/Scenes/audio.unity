@@ -3562,10 +3562,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1316602255922420029, guid: b886dbf8386f04a889fb26efdfab3a62, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -1284945511, guid: c453e831bdc134802b1fd72c2e16fdbd, type: 3}
     - target: {fileID: 2074058038044564946, guid: b886dbf8386f04a889fb26efdfab3a62, type: 3}
       propertyPath: m_Name
       value: Player
@@ -3576,11 +3572,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7153606667292618240, guid: b886dbf8386f04a889fb26efdfab3a62, type: 3}
       propertyPath: m_LocalScale.x
-      value: 50
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 7153606667292618240, guid: b886dbf8386f04a889fb26efdfab3a62, type: 3}
       propertyPath: m_LocalScale.y
-      value: 50
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 7153606667292618240, guid: b886dbf8386f04a889fb26efdfab3a62, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5036,7 +5032,6 @@ MonoBehaviour:
   messageText: {fileID: 1822104469}
   messagePanel: {fileID: 357472703}
   notificationPopup: {fileID: 0}
-  profilePictureImage: {fileID: 0}
   slideTime: 0.5
 --- !u!4 &2042082986
 Transform:

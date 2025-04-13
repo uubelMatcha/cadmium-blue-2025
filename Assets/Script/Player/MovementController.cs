@@ -57,7 +57,7 @@ namespace Script.Player
             }
             
             //flip sprite
-            playerSpriteRenderer.flipX = lastDirectioninput.x < 0;
+            playerSpriteRenderer.flipX = lastDirectioninput.x > 0;
             
             
             //get last position of player for facing idle direction

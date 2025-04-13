@@ -17,9 +17,12 @@ public class PlayerInteraction : MonoBehaviour
     private Vector2 lastDirectionInput;
 
     public string currentData = null;
+    public string sfx = null;
 
     public bool ghostBoyIsTarget = false;
     private bool endingInProgress = false;
+
+
 
 
 
@@ -48,6 +51,7 @@ public class PlayerInteraction : MonoBehaviour
     public void ResetData() {
 
         currentData = null;
+        sfx = null;
 
     }
 
@@ -75,6 +79,7 @@ public class PlayerInteraction : MonoBehaviour
         }
         else {
             // Debug.Log("Displaying Text");
+            AudioManager.audioManagerInstance.PlaySoundEffect(sfx);
 
             flavorTextUI.GetComponentInChildren<TextMeshProUGUI>().text = currentData;
             flavorTextUI.SetActive(true);

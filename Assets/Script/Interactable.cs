@@ -6,7 +6,7 @@ public class Interactable : MonoBehaviour
 
     public GameObject text;
     public InteractableData data;
-
+    
     private void OnTriggerEnter2D(Collider2D other) {
 
         if (other.tag == "PlayerInteractionHitBox") {
@@ -14,7 +14,6 @@ public class Interactable : MonoBehaviour
 
             PlayerInteraction playerInteraction = other.GetComponent<PlayerInteraction>();
 
-            AudioManager.audioManagerInstance.PlaySoundEffect(data.sfx.musicTitle);
             
             float anxiety = FindFirstObjectByType<AnxietySystem>().anxietyLevel;
 
@@ -27,6 +26,8 @@ public class Interactable : MonoBehaviour
             else {
                 playerInteraction.SetTextData(data.level3);
             }
+
+            playerInteraction.sfx = data.sfx.musicTitle;
         }
 
     }

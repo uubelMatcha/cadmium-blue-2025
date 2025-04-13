@@ -5201,6 +5201,7 @@ MonoBehaviour:
   clicksUntilCloseMessage: 10
   anxietyDamagePerSecond: 5
   ignoreHealPerSecond: 1.2
+  thresholdEvents: []
   anxietySlider: {fileID: 357472704}
   ignoreButton: {fileID: 357472702}
   maxIgnoreButtonScale: 1.5
@@ -5850,9 +5851,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5085199021326660481, guid: 31e8a103775dae541b7df07fea048700, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8854313219400772076, guid: 31e8a103775dae541b7df07fea048700, type: 3}
       propertyPath: m_Name
       value: DialogueCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8854313219400772076, guid: 31e8a103775dae541b7df07fea048700, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -35,7 +35,7 @@ namespace Script.Player
 
         private void Awake()
         {
-            DontDestroyOnLoad(gameObject);
+            //DontDestroyOnLoad(gameObject);
         }
 
         void Start()

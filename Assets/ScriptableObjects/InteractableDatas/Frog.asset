@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b75624b2526cae648a1c72e6561fe361, type: 3}
   m_Name: Frog
   m_EditorClassIdentifier: 
-  itemName: 
-  level1: 
-  level2: 
-  level3: 
+  itemName: frog
+  level1: 'Yoooooo shit a frog!! Haha, what a funny looking guy. Just chilling. '
+  level2: 'What are you looking at, guy? '
+  level3: 'He would have liked to see this :( '
   sfx: {fileID: 11400000, guid: a8fd6bb705ed5f44ba4e0fe02ceb1563, type: 2}

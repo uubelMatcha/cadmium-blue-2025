@@ -68,7 +68,8 @@ public class PostProcessingBehaviour : MonoBehaviour
         // while (timer <= panicMaxDuration) {
         while(true) {
 
-            float intensity = 1f - (Time.time - Mathf.Floor(Time.time));
+            // float intensity = 1f - (Time.time - Mathf.Floor(Time.time));
+            float intensity = HeartBeatFunction(Time.time);
             vignette.intensity.value = Mathf.Lerp(panicVignetteRange.x, panicVignetteRange.y, intensity);
 
             // beatSpeed = Mathf.Lerp(panicSpeedRange.x, panicSpeedRange.y, timer / panicMaxDuration);
@@ -87,5 +88,13 @@ public class PostProcessingBehaviour : MonoBehaviour
         vignette.intensity.value = anxiety;
         panicMode = false;
 
+    }
+
+    private float HeartBeatFunction(float x) {
+
+        float y = (1.1f + Mathf.Floor(x) - x + (0.1f * (Mathf.Floor(2f * x) - (2f * x)))) / 1.1f;
+
+        return y;
+        
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Threading;
 
 // After X seconds, a message appears.
 // When that message is closed, a timer starts again and opens the next message after X more seconds. Repeat.
@@ -35,6 +36,10 @@ public class MessageSystem : MonoBehaviour
     [Header("UI Elements")]
     [SerializeField] private TextMeshProUGUI  messageText;
     [SerializeField] private GameObject messagePanel;
+    [SerializeField] private GameObject notificationPopup;
+
+
+    [SerializeField] private float slideTime = 0.5f;
     
     public delegate void OnMessagePopUp(bool badMessage);
     public OnMessagePopUp onMessageOpen;
@@ -47,7 +52,7 @@ public class MessageSystem : MonoBehaviour
     
     private void Start()
     {
-        messagePanel.SetActive(false);
+        // messagePanel.SetActive(false);
         onMessageClose += StartNextPopUpTimer;
         StartCoroutine(OpenPopUpAfterSeconds());
     }
@@ -61,10 +66,13 @@ public class MessageSystem : MonoBehaviour
     {
         InitializeNextPopUp();
         yield return new WaitForSecondsRealtime(secondsBetweenMessages);
-        OpenNextPopUp();
         
         float delay = 0;
         MessageData messageCheck = curMessage;
+
+        // Notification popup
+        notificationPopup.SetActive(true);
+
         while (delay < curMessage.dismissTime )
         {
             if(messageCheck != curMessage)
@@ -73,13 +81,18 @@ public class MessageSystem : MonoBehaviour
             yield return null;
         }
 
+        notificationPopup.SetActive(false);
+
+
+        OpenNextPopUp();
         messageText.text = curMessage.messageText;
         onMessageCloseDelayPassed.Invoke(curMessage);
     }
 
     private void OpenNextPopUp()
     {
-        messagePanel.SetActive(true);
+        // messagePanel.SetActive(true);
+        StartCoroutine(SlideUp());
         onMessageOpen.Invoke(curMessage.ticksAnxiety);
     }
     
@@ -95,12 +108,45 @@ public class MessageSystem : MonoBehaviour
     
     private void HidePopUp()
     {
-        messagePanel.SetActive(false);
+        // messagePanel.SetActive(false);
+        StartCoroutine(SlideDown());
         onMessageClose.Invoke();
     }
 
     public static void ClosePopUp()
     {
         Instance.HidePopUp();
+    }
+
+
+    private IEnumerator SlideUp() {
+
+        float timer = 0f;
+
+        while (timer <= slideTime) {
+
+            float yPos = Mathf.SmoothStep(-900f, 0f, timer / slideTime);
+            messagePanel.GetComponent<RectTransform>().localPosition = new Vector3(0f, yPos, 0f);
+
+            timer += Time.deltaTime;
+            yield return null;
+        }
+        messagePanel.GetComponent<RectTransform>().localPosition = new Vector3(0f, 0f, 0f);
+    }
+
+    
+    private IEnumerator SlideDown() {
+
+        float timer = 0f;
+
+        while (timer <= slideTime) {
+
+            float yPos = Mathf.SmoothStep(0, -900f, timer / slideTime);
+            messagePanel.GetComponent<RectTransform>().localPosition = new Vector3(0f, yPos, 0f);
+
+            timer += Time.deltaTime;
+            yield return null;
+        }
+        messagePanel.GetComponent<RectTransform>().localPosition = new Vector3(0f, -900f, 0f);
     }
 }

@@ -6806,6 +6806,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4885875755215096274, guid: b6a4a8bbd819347ed83f8ff8580e5cf8, type: 3}
+      propertyPath: Lens.OrthographicSize
+      value: 21.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 4885875755215096274, guid: b6a4a8bbd819347ed83f8ff8580e5cf8, type: 3}
       propertyPath: Target.TrackingTarget
       value: 
       objectReference: {fileID: 1695915644}
@@ -6876,6 +6880,10 @@ PrefabInstance:
     - target: {fileID: 7661060201609659484, guid: b6a4a8bbd819347ed83f8ff8580e5cf8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8675219612963290511, guid: b6a4a8bbd819347ed83f8ff8580e5cf8, type: 3}
+      propertyPath: orthographic size
+      value: 21.21
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8077,8 +8085,13 @@ MonoBehaviour:
   clicksUntilCloseMessage: 10
   anxietyDamagePerSecond: 1
   ignoreHealPerSecond: 1.2
+  thresholdEvents: []
+  anxietyLevel: 0
   anxietySlider: {fileID: 827603105}
   ignoreButton: {fileID: 827603106}
+  ignoreButtonCompletionMask: {fileID: 0}
+  maxIgnoreButtonScale: 1.5
+  ignoreButtonRelaxTime: 0.25
 --- !u!114 &1461053586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8098,6 +8111,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: cbd903a56b1757c44a52ed7d7225afa7, type: 2}
   messageText: {fileID: 827603103}
   messagePanel: {fileID: 827603104}
+  notificationPopup: {fileID: 0}
+  profilePictureImage: {fileID: 0}
+  slideTime: 0.5
 --- !u!4 &1461053587
 Transform:
   m_ObjectHideFlags: 0
@@ -8784,20 +8800,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerBGM:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1080794230}
-        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-        m_MethodName: ChangeBGM
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  bgmTitle: Pinecone_Jelly
+      m_Calls: []
+  bgmTitle: Meeting_the_Ghost
 --- !u!1001 &1695915643
 PrefabInstance:
   m_ObjectHideFlags: 0

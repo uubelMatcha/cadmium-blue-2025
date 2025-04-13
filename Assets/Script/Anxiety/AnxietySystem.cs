@@ -1,13 +1,77 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class AnxietySystem : MonoBehaviour
 {
+    public enum Comparators
+    {
+        LessThanOrEqual,
+        GreaterThanOrEqual,
+    }
+    
+    [Serializable]
+    public struct ThresholdEvents
+    {
+        public Comparators comparator;
+        public float threshold;
+        public GameObject onAnxiety;
+        public MonoBehaviour onAnxietyComponent;
+
+        public void OnAnxietyChanged(float value)
+        {
+            
+            switch (comparator)
+            {
+                case Comparators.GreaterThanOrEqual:
+                    DoOnGreaterEqual(value);
+                    break;
+                case Comparators.LessThanOrEqual:
+                    DoOnLessOrEqual(value);
+                    break;
+            }
+        }
+        
+        void DoOnLessOrEqual(float value)
+        {
+            if (value <= threshold)
+            {
+                onAnxiety.SetActive(true);
+                if(onAnxietyComponent != null)
+                    onAnxietyComponent.enabled = true;
+            }
+            else
+            {
+                onAnxiety.SetActive(false);
+                if(onAnxietyComponent != null)
+                    onAnxietyComponent.enabled = false;
+            }
+
+        }
+        void DoOnGreaterEqual(float value)
+        {
+            if (  value >= threshold)
+            {
+                onAnxiety.SetActive(true);
+                if(onAnxietyComponent != null)
+                    onAnxietyComponent.enabled = true;
+            }
+            else
+            {
+                onAnxiety.SetActive(false);
+                if(onAnxietyComponent != null)
+                    onAnxietyComponent.enabled = false;
+            }
+        }
+    }
+    
     [Header("Design Variables")]
     [SerializeField] private int clicksUntilCloseMessage = 10;
     [SerializeField] private float anxietyDamagePerSecond = 1f;
     [SerializeField] private float ignoreHealPerSecond = 1.2f;
+    [SerializeField] List<ThresholdEvents> thresholdEvents = new List<ThresholdEvents>();
     
     [Header("UI Elements")]
     [SerializeField] private Slider anxietySlider;
@@ -49,7 +113,7 @@ public class AnxietySystem : MonoBehaviour
         postProcessingBehaviour.panicMode = false;
     }
 
-    // TODO: make it time frame independent?
+// TODO: make it time frame independent?
     private void Update()
     {
 
@@ -77,9 +141,13 @@ public class AnxietySystem : MonoBehaviour
         }
     }
 
-    private void TickAnxietyUp()
+    private void TickAnxietyUp() 
     {
         anxietySlider.value += anxietyDamagePerSecond * Time.deltaTime;
+        foreach (ThresholdEvents thresholdEvent in thresholdEvents)
+        {
+            thresholdEvent.OnAnxietyChanged(anxietySlider.value);
+        }
     }
 
     private void TickAnxietyDown()

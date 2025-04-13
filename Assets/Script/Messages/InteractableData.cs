@@ -7,5 +7,6 @@ public class InteractableData : ScriptableObject
     public string level1;
     public string level2;
     public string level3;
+    public SoundData sfx;
 
 }

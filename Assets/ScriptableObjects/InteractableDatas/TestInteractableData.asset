@@ -16,3 +16,4 @@ MonoBehaviour:
   level1: "Woah. Are these eyes or\u2026 eggs? That\u2019s\u2026 kinda cool. "
   level2: "\u2026 This tree stump is kind of freaking me out. Is it looking at me? "
   level3: 'o.o '
+  sfx: {fileID: 11400000, guid: 4f0b04ef6178cca44a9ccf76b0aef680, type: 2}

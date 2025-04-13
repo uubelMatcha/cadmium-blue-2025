@@ -44,16 +44,15 @@ public class AudioManager : MonoBehaviour
     }
     
     //coroutine to trigger a sound effect
-    public IEnumerator PlaySoundEffect(string sfxTitle)
+    public void PlaySoundEffect(string sfxTitle)
     {
         SoundData desiredSfx = GetSound(sfxTitle, sfxList);
         sfxSource.PlayOneShot(desiredSfx.audioClip);
-        yield return new WaitForSeconds(1f);
     }
 
     public void PlayFootsteps(bool enableFootsteps)
     {
-        if (enableFootsteps)
+        if (enableFootsteps && !footstepsSource.isPlaying)
         {
             footstepsSource.Play();
         }

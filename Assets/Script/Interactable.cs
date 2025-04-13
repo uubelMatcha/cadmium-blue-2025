@@ -30,7 +30,7 @@ public class Interactable : MonoBehaviour
             PlayerInteraction playerInteraction = other.GetComponent<PlayerInteraction>();
 
 
-            float anxiety = GameObject.FindObjectOfType<AnxietySystem>().anxietyLevel;
+            float anxiety = FindFirstObjectByType<AnxietySystem>().anxietyLevel;
 
             if (anxiety <= 0.33f) {
                 playerInteraction.SetTextData(data.level1);

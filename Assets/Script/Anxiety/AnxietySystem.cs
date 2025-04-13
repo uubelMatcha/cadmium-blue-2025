@@ -91,7 +91,7 @@ public class AnxietySystem : MonoBehaviour
     private bool messageOpen = false;
     private bool isTickingAnxiety = false;
     private int curIgnoreClicks = 0;
-    private bool hasMissedDelay = false;
+    // private bool hasMissedDelay = false;
 
 
     private PostProcessingBehaviour postProcessingBehaviour;
@@ -101,7 +101,7 @@ public class AnxietySystem : MonoBehaviour
         ignoreButton.gameObject.SetActive(false);
         MessageSystem.Instance.onMessageOpen += OnMessageOpen;
         MessageSystem.Instance.onMessageClose += ResetSystem;
-        MessageSystem.Instance.onMessageCloseDelayPassed += OnMessageCloseDelayPassed;
+        // MessageSystem.Instance.onMessageCloseDelayPassed += OnMessageCloseDelayPassed;
 
         postProcessingBehaviour = FindFirstObjectByType<PostProcessingBehaviour>();
         ignoreButtonCompletionMask.localScale = new Vector3(0f, 0.2f, 1f);
@@ -188,11 +188,11 @@ public class AnxietySystem : MonoBehaviour
         anxietySlider.value -= ignoreHealPerSecond * Time.deltaTime;
     }
     
-    private void OnMessageCloseDelayPassed(MessageData messagedata)
-    {
-        anxietySlider.value += messagedata.anxietyOnFullShow;
-        hasMissedDelay = true;
-    }
+    // private void OnMessageCloseDelayPassed(MessageData messagedata)
+    // {
+    //     anxietySlider.value += messagedata.anxietyOnFullShow;
+    //     hasMissedDelay = true;
+    // }
     
     private void CheckIgnoreClicks()
     {

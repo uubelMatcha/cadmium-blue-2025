@@ -85,7 +85,7 @@ public class MessageSystem : MonoBehaviour
 
         OpenNextPopUp();
         messageText.text = curMessage.messageText;
-        onMessageCloseDelayPassed.Invoke(curMessage);
+        // onMessageCloseDelayPassed.Invoke(curMessage);
     }
 
     private void OpenNextPopUp()
@@ -102,6 +102,7 @@ public class MessageSystem : MonoBehaviour
             curMessage = messages[curMessageIndex];
             curMessageIndex++;
             messageText.text = curMessage.cutoffText;
+            // Debug.Log(curMessage.profilePicture);
             profilePictureImage.sprite = curMessage.profilePicture;
         }
     }

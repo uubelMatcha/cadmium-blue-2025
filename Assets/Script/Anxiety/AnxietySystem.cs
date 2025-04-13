@@ -79,7 +79,7 @@ public class AnxietySystem : MonoBehaviour
     [Header("UI Elements")]
     [SerializeField] private Slider anxietySlider;
     [SerializeField] private Button ignoreButton;
-    // [SerializeField] private Image ignoreButtonCompletionSlider;
+    [SerializeField] private RectTransform ignoreButtonCompletionMask;
 
 
     public float maxIgnoreButtonScale = 1.5f;
@@ -101,7 +101,7 @@ public class AnxietySystem : MonoBehaviour
         MessageSystem.Instance.onMessageCloseDelayPassed += OnMessageCloseDelayPassed;
 
         postProcessingBehaviour = FindFirstObjectByType<PostProcessingBehaviour>();
-        // ignoreButtonCompletionSlider.gameObject.transform.localScale = new Vector3(0f, 1f, 1f);
+        ignoreButtonCompletionMask.localScale = new Vector3(0f, 0.2f, 1f);
     }
     
     private void OnMessageOpen(bool isBadMessage)
@@ -122,8 +122,7 @@ public class AnxietySystem : MonoBehaviour
         postProcessingBehaviour.panicMode = false;
 
         ignoreButton.transform.localScale = new Vector3(1f, 1f, 1f);
-        // ignoreButtonCompletionSlider.gameObject.transform.localScale = new Vector3(0f, 1f, 1f);
-
+        ignoreButtonCompletionMask.localScale = new Vector3(0f, 0.2f, 1f);
 
     }
 
@@ -150,6 +149,9 @@ public class AnxietySystem : MonoBehaviour
                 // {
                 curIgnoreClicks++;
                 // ignoreButtonCompletionSlider.gameObject.transform.localScale = new Vector3(curIgnoreClicks / clicksUntilCloseMessage, 1f, 1f);
+                // Debug.Log(curIgnoreClicks(float) / clicksUntilCloseMessage(float));
+                ignoreButtonCompletionMask.localScale = new Vector3((float)curIgnoreClicks / clicksUntilCloseMessage, 0.2f, 1f);
+
                 StopCoroutine("PulseIgnoreButton");
                 StartCoroutine("PulseIgnoreButton");
                 // TickAnxietyDown();

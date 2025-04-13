@@ -2144,6 +2144,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1888118751}
     m_Modifications:
+    - target: {fileID: 6311440375334834387, guid: 01e0568a1fe1c304b998eb142bf80268, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: 3b547030be313e8439517ec4fd9d744c, type: 3}
+    - target: {fileID: 6311440375334834387, guid: 01e0568a1fe1c304b998eb142bf80268, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3b547030be313e8439517ec4fd9d744c, type: 3}
     - target: {fileID: 7783303144847114959, guid: 01e0568a1fe1c304b998eb142bf80268, type: 3}
       propertyPath: m_Name
       value: BackgroundMusicSource
@@ -19071,6 +19079,46 @@ PrefabInstance:
       propertyPath: footstepsSource
       value: 
       objectReference: {fileID: 382253467}
+    - target: {fileID: 5934804342592904243, guid: 9232c1bba25df6441865d59297f27727, type: 3}
+      propertyPath: sfxList.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934804342592904243, guid: 9232c1bba25df6441865d59297f27727, type: 3}
+      propertyPath: 'sfxList.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 9dadf78816dc08544b2309f8acedef04, type: 2}
+    - target: {fileID: 5934804342592904243, guid: 9232c1bba25df6441865d59297f27727, type: 3}
+      propertyPath: 'sfxList.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 0cebc4de044160043b1e124c15a5a0c1, type: 2}
+    - target: {fileID: 5934804342592904243, guid: 9232c1bba25df6441865d59297f27727, type: 3}
+      propertyPath: 'sfxList.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 54b34e14d01f7b644bfd57b4afaed0e1, type: 2}
+    - target: {fileID: 5934804342592904243, guid: 9232c1bba25df6441865d59297f27727, type: 3}
+      propertyPath: 'sfxList.Array.data[3]'
+      value: 
+      objectReference: {fileID: 11400000, guid: a8fd6bb705ed5f44ba4e0fe02ceb1563, type: 2}
+    - target: {fileID: 5934804342592904243, guid: 9232c1bba25df6441865d59297f27727, type: 3}
+      propertyPath: 'sfxList.Array.data[4]'
+      value: 
+      objectReference: {fileID: 11400000, guid: fd4a05d849c63e24aa97d16674ae9a94, type: 2}
+    - target: {fileID: 5934804342592904243, guid: 9232c1bba25df6441865d59297f27727, type: 3}
+      propertyPath: 'sfxList.Array.data[5]'
+      value: 
+      objectReference: {fileID: 11400000, guid: fb6158692f51d1346b32eb8fe73c143c, type: 2}
+    - target: {fileID: 5934804342592904243, guid: 9232c1bba25df6441865d59297f27727, type: 3}
+      propertyPath: 'sfxList.Array.data[6]'
+      value: 
+      objectReference: {fileID: 11400000, guid: fc3061f4f54d95747b3e488108205e43, type: 2}
+    - target: {fileID: 5934804342592904243, guid: 9232c1bba25df6441865d59297f27727, type: 3}
+      propertyPath: 'sfxList.Array.data[7]'
+      value: 
+      objectReference: {fileID: 11400000, guid: a5239573708c1ab41aa3b3f7ffbb2dae, type: 2}
+    - target: {fileID: 5934804342592904243, guid: 9232c1bba25df6441865d59297f27727, type: 3}
+      propertyPath: 'sfxList.Array.data[8]'
+      value: 
+      objectReference: {fileID: 11400000, guid: b94a58749cb037b44a984ed1c897b94c, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

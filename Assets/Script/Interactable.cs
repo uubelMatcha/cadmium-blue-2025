@@ -8,27 +8,16 @@ namespace Script
     {
 
 
-<<<<<<< HEAD
-    public GameObject text;
-    public InteractableData data;
-    
-    private void OnTriggerEnter2D(Collider2D other) {
-=======
         public GameObject text;
         public InteractableData data;
 
         private void OnTriggerEnter2D(Collider2D other) {
->>>>>>> be297cb08596f912e5e89f958eb8d481fb92325a
 
             if (other.tag == "PlayerInteractionHitBox") {
                 text.SetActive(true);
 
                 PlayerInteraction playerInteraction = other.GetComponent<PlayerInteraction>();
 
-<<<<<<< HEAD
-=======
-                AudioManager.audioManagerInstance.PlaySoundEffect(data.sfx.musicTitle);
->>>>>>> be297cb08596f912e5e89f958eb8d481fb92325a
             
                 float anxiety = FindFirstObjectByType<AnxietySystem>().anxietyLevel;
 
@@ -41,30 +30,9 @@ namespace Script
                 else {
                     playerInteraction.SetTextData(data.level3);
                 }
+
+                playerInteraction.sfx = data.sfx.musicTitle;
             }
-<<<<<<< HEAD
-            else if (anxiety <= 0.66f) {
-                playerInteraction.SetTextData(data.level2);
-            }
-            else {
-                playerInteraction.SetTextData(data.level3);
-            }
-
-            playerInteraction.sfx = data.sfx.musicTitle;
-        }
-
-    }
-
-    private void OnTriggerExit2D(Collider2D other) {
-
-
-        if (other.tag == "PlayerInteractionHitBox") {
-            text.SetActive(false);
-            PlayerInteraction playerInteraction = other.GetComponent<PlayerInteraction>();
-
-            playerInteraction.ResetData();
-=======
->>>>>>> be297cb08596f912e5e89f958eb8d481fb92325a
 
         }
 

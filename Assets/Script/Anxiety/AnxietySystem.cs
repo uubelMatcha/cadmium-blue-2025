@@ -16,6 +16,10 @@ public class AnxietySystem : MonoBehaviour
     private bool isTickingAnxiety = false;
     private int curIgnoreClicks = 0;
     private bool hasMissedDelay = false;
+
+    public float anxietyLevel;
+
+    private PostProcessingBehaviour postProcessingBehaviour;
     
     private void Start()
     {
@@ -23,11 +27,16 @@ public class AnxietySystem : MonoBehaviour
         MessageSystem.Instance.onMessageOpen += OnMessageOpen;
         MessageSystem.Instance.onMessageClose += ResetSystem;
         MessageSystem.Instance.onMessageCloseDelayPassed += OnMessageCloseDelayPassed;
+
+        postProcessingBehaviour = FindFirstObjectByType<PostProcessingBehaviour>();
     }
     
     private void OnMessageOpen(bool isBadMessage)
     {
+        // if (isBadMessage == true) {
         isTickingAnxiety = true;
+        StartCoroutine(postProcessingBehaviour.HeartBeatEffect());
+        // }
         curIgnoreClicks = 0;
         ignoreButton.gameObject.SetActive(true);
     }
@@ -37,11 +46,15 @@ public class AnxietySystem : MonoBehaviour
         curIgnoreClicks = 0;
         isTickingAnxiety = false;
         ignoreButton.gameObject.SetActive(false);
+        postProcessingBehaviour.panicMode = false;
     }
 
     // TODO: make it time frame independent?
     private void Update()
     {
+
+        anxietyLevel = anxietySlider.value / 100f;
+
         // checks if the player has clicked ignore enough times
         CheckIgnoreClicks();
         

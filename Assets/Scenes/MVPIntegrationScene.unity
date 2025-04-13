@@ -5112,10 +5112,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clicksUntilCloseMessage: 10
-  anxietyDamagePerSecond: 1
+  anxietyDamagePerSecond: 5
   ignoreHealPerSecond: 1.2
   anxietySlider: {fileID: 357472704}
   ignoreButton: {fileID: 357472702}
+  anxietyLevel: 0
 --- !u!114 &2042082985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5780,6 +5781,14 @@ PrefabInstance:
     - target: {fileID: 2960122142158979379, guid: 5a0ed4552948ba44981231cc79e5493e, type: 3}
       propertyPath: m_Name
       value: DynamicVolume
+      objectReference: {fileID: 0}
+    - target: {fileID: 3586942817408283792, guid: 5a0ed4552948ba44981231cc79e5493e, type: 3}
+      propertyPath: anxietySystem
+      value: 
+      objectReference: {fileID: 2042082984}
+    - target: {fileID: 3586942817408283792, guid: 5a0ed4552948ba44981231cc79e5493e, type: 3}
+      propertyPath: passiveVignetteRange.y
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8222564554430593694, guid: 5a0ed4552948ba44981231cc79e5493e, type: 3}
       propertyPath: m_LocalPosition.x

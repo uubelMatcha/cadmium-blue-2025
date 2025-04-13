@@ -53,18 +53,18 @@ public class PlayerInteraction : MonoBehaviour
 
     public void DisplayText() {
 
-        Debug.Log("E was pressed");
+        // Debug.Log("E was pressed");
 
         if (currentData == null) {
-            Debug.Log("Data is null");
+            // Debug.Log("Data is null");
             return;
         }
         else if (flavorTextUI.activeInHierarchy == true) {
-            Debug.Log("Data is already enabled");
+            // Debug.Log("Data is already enabled");
             return;
         }
         else {
-            Debug.Log("Displaying Text");
+            // Debug.Log("Displaying Text");
 
             flavorTextUI.GetComponentInChildren<TextMeshProUGUI>().text = currentData;
             flavorTextUI.SetActive(true);

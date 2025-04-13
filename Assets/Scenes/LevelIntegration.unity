@@ -21405,7 +21405,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clicksUntilCloseMessage: 20
-  anxietyDamagePerSecond: 10
+  anxietyDamagePerSecond: 7.5
   ignoreHealPerSecond: 1.2
   thresholdEvents: []
   anxietyLevel: 0

@@ -8,6 +8,7 @@ public class MessageData : ScriptableObject
     public string messageText;
     public bool ticksAnxiety;
 
+    public Sprite profilePicture;
     public string characterName;
 
     public float dismissTime = 2f;

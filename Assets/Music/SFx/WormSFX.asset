@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eb361cd486e1d4b6f92bb1049eda9798, type: 3}
-  m_Name: bgm 2
+  m_Name: WormSFX
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: 995b31933d4314c7cb6dc06848dcfd3a, type: 3}
-  musicTitle: Pinecone_Jelly
-  sType: 0
+  audioClip: {fileID: 8300000, guid: ab0ab99305e441a4696992143be0076c, type: 3}
+  musicTitle: Worm
+  sType: 1

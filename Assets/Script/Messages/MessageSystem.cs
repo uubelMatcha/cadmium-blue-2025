@@ -61,6 +61,9 @@ public class MessageSystem : MonoBehaviour
 
     private void StartNextPopUpTimer()
     {
+        if (curMessageIndex >= messages.Count) {
+            return;
+        }
         StartCoroutine(OpenPopUpAfterSeconds());
     }
 

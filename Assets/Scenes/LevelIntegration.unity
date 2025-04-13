@@ -19600,6 +19600,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoundEffectsSource
       objectReference: {fileID: 0}
+    - target: {fileID: 2372390101068698766, guid: a67b6bc5cd8cd104d97ac2a773a393d6, type: 3}
+      propertyPath: m_Volume
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21400,8 +21404,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79b8d3e15f703db48b8a215f3bda8605, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clicksUntilCloseMessage: 10
-  anxietyDamagePerSecond: 5
+  clicksUntilCloseMessage: 20
+  anxietyDamagePerSecond: 10
   ignoreHealPerSecond: 1.2
   thresholdEvents: []
   anxietyLevel: 0

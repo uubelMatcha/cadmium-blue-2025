@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: Mushrooms
   m_EditorClassIdentifier: 
   itemName: 
-  level1: 
-  level2: 
-  level3: 
+  level1: "Mushrooms! I wonder what kind they are. If they\u2019re the fun kind.
+    Hehe. "
+  level2: "I better not try any of these. They could be Death Caps. Don\u2019t those
+    kill you, like, immediately? "
+  level3: "Weird, slimy, kinda freaky\u2026 I wonder if these will grow where he\u2026
+    Mmm ;-; "

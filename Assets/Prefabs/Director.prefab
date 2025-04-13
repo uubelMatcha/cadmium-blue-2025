@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5325913306000141328}
   - component: {fileID: 8675219612963290511}
-  - component: {fileID: 5893479135929869449}
   - component: {fileID: 5254824342538420146}
   - component: {fileID: 7603572351988847505}
   m_Layer: 0
@@ -29,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 5410220483989109383}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1863, y: -273, z: -17.3}
+  m_LocalPosition: {x: -16, y: 77, z: -16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -70,7 +69,7 @@ Camera:
   far clip plane: 1000
   field of view: 74.8
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 349.8
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -86,14 +85,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &5893479135929869449
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5410220483989109383}
-  m_Enabled: 1
 --- !u!114 &5254824342538420146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -245,7 +236,7 @@ Transform:
   m_GameObject: {fileID: 7427275494834665097}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1863, y: -273, z: -17.3}
+  m_LocalPosition: {x: -16, y: 77, z: -16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -276,7 +267,7 @@ MonoBehaviour:
     CustomLookAtTarget: 0
   Lens:
     FieldOfView: 74.8
-    OrthographicSize: 5
+    OrthographicSize: 349.8
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -306,7 +297,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 886251e9a18ece04ea8e61686c173e1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CameraDistance: 17.3
+  CameraDistance: 16
   DeadZoneDepth: 0
   Composition:
     ScreenPosition: {x: 0, y: 0}

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5642575868320844747}
   - component: {fileID: 5934804342592904243}
+  - component: {fileID: 5077186010100424182}
   m_Layer: 0
   m_Name: AudioSystem
   m_TagString: Untagged
@@ -58,4 +59,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6508a52285d67534e9a819df61d4ae18, type: 2}
   - {fileID: 11400000, guid: f793da9b0c7ee7145a49033f0645b824, type: 2}
   - {fileID: 11400000, guid: 2f6fcbfbcd72b4c48bc3cb5e2a4944e7, type: 2}
+  footstepClip: {fileID: 8300000, guid: 9944408a11f4997459a9425dedd3f6fa, type: 3}
   currentBGM: {fileID: 11400000, guid: 0ad00206505a14aed9814b92368b65f3, type: 2}
+--- !u!81 &5077186010100424182
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4212036524020355179}
+  m_Enabled: 1

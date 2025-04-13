@@ -13,6 +13,8 @@ public class AudioManager : MonoBehaviour
 
     [SerializeField] private List<SoundData> bgmList;
     [SerializeField] private List<SoundData> sfxList;
+
+    [SerializeField] private AudioClip footstepClip;
     
     //debug only
     [SerializeField] private SoundData currentBGM;
@@ -54,9 +56,10 @@ public class AudioManager : MonoBehaviour
     {
         if (enableFootsteps && !footstepsSource.isPlaying)
         {
-            footstepsSource.Play();
+            footstepsSource.clip = footstepClip;
+            footstepsSource.PlayOneShot(footstepClip);
         }
-        else
+        else if(!enableFootsteps && footstepsSource.isPlaying)
         {
             footstepsSource.Stop();
         }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -52,8 +53,12 @@ public class MessageSystem : MonoBehaviour
     public delegate void OnMessageCloseDelayPassed(MessageData messageData);
     public OnMessageCloseDelayPassed onMessageCloseDelayPassed;
     
+    //ghostboy to remove during refactor
+    private GameObject ghostBoy;
+    
     private void Start()
     {
+        ghostBoy = GameObject.FindGameObjectWithTag("DeadBrother");
         // messagePanel.SetActive(false);
         onMessageClose += StartNextPopUpTimer;
         StartCoroutine(OpenPopUpAfterSeconds());
@@ -138,5 +143,17 @@ public class MessageSystem : MonoBehaviour
         messagePanel.GetComponent<RectTransform>().localPosition = new Vector3(0f, end, 0f);
     }
 
-    
+    //hack method for last minute, set ghostboy to active
+    private void Update()
+    {
+        SpawnGhostBoy();
+    }
+
+    private void SpawnGhostBoy()
+    {
+        if ((curMessageIndex == messages.Count - 1) && !ghostBoy.activeSelf)
+        {
+            ghostBoy.SetActive(true);
+        }
+    }
 }

@@ -12,15 +12,24 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private List<SoundData> bgmList;
     [SerializeField] private List<SoundData> sfxList;
     
-    
     //debug only
     [SerializeField] private SoundData currentBGM;
 
-    private void Start()
+    public static AudioManager audioManagerInstance;
+    
+    private void Awake()
     {
-        
+        if (audioManagerInstance == null)
+        {
+            audioManagerInstance = this;   
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+        DontDestroyOnLoad(gameObject);
     }
-
+    
     public void ChangeBGM(string bgmTitle)
     {
         SoundData desiredBGM = GetSound(bgmTitle, bgmList);

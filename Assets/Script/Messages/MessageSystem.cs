@@ -31,7 +31,7 @@ public class MessageSystem : MonoBehaviour
     [SerializeField] private List<MessageData> messages;
     
     private MessageData curMessage;
-    private int curMessageIndex = 0;
+    [SerializeField] private int curMessageIndex = 0;
     
     // Currently only one message at a time
     [Header("UI Elements")]
@@ -54,11 +54,12 @@ public class MessageSystem : MonoBehaviour
     public OnMessageCloseDelayPassed onMessageCloseDelayPassed;
     
     //ghostboy to remove during refactor
-    private GameObject ghostBoy;
+    [SerializeField] private GameObject ghostBoy;
+    public bool isEnd = false;
+    [SerializeField] private GameObject fog;
     
     private void Start()
     {
-        ghostBoy = GameObject.FindGameObjectWithTag("DeadBrother");
         // messagePanel.SetActive(false);
         onMessageClose += StartNextPopUpTimer;
         StartCoroutine(OpenPopUpAfterSeconds());
@@ -106,6 +107,7 @@ public class MessageSystem : MonoBehaviour
     
     private void InitializeNextPopUp()
     {
+        
         if (messages.Count > curMessageIndex)
         {
             curMessage = messages[curMessageIndex];
@@ -123,6 +125,10 @@ public class MessageSystem : MonoBehaviour
         // messagePanel.SetActive(false);
         StartCoroutine(SlidePhone(0f, -900f));
         onMessageClose.Invoke();
+        if (messages.Count <= curMessageIndex)
+        {
+            isEnd = true;
+        } 
     }
 
     public static void ClosePopUp()
@@ -154,9 +160,10 @@ public class MessageSystem : MonoBehaviour
 
     private void SpawnGhostBoy()
     {
-        if ((curMessageIndex == messages.Count - 1) && !ghostBoy.activeSelf)
+        if (isEnd && !ghostBoy.activeSelf)
         {
             ghostBoy.SetActive(true);
+            fog.SetActive(false);
         }
     }
 }

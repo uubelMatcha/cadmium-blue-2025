@@ -8,6 +8,8 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioSource bgmSource;
 
     [SerializeField] private AudioSource sfxSource;
+    
+    [SerializeField] private AudioSource footstepsSource;
 
     [SerializeField] private List<SoundData> bgmList;
     [SerializeField] private List<SoundData> sfxList;
@@ -47,6 +49,18 @@ public class AudioManager : MonoBehaviour
         SoundData desiredSfx = GetSound(sfxTitle, sfxList);
         sfxSource.PlayOneShot(desiredSfx.audioClip);
         yield return new WaitForSeconds(1f);
+    }
+
+    public void PlayFootsteps(bool enableFootsteps)
+    {
+        if (enableFootsteps)
+        {
+            footstepsSource.Play();
+        }
+        else
+        {
+            footstepsSource.Stop();
+        }
     }
 
     private SoundData GetSound(string title, List<SoundData> dataBank)

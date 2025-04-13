@@ -15,6 +15,7 @@ namespace Script.Player
         Rigidbody2D PlayerRb;
         private AnimationController playerAnimationController;
         private SpriteRenderer playerSpriteRenderer;
+        private AudioSource audioSource;
 
         //get set
         public Vector2 GetLastDirection()
@@ -41,7 +42,7 @@ namespace Script.Player
             PlayerRb = GetComponent<Rigidbody2D>();
             playerAnimationController = GetComponent<AnimationController>();
             playerSpriteRenderer = GetComponent<SpriteRenderer>();
-            
+            audioSource = GetComponent<AudioSource>();
         }
 
         //call in PlayerController
@@ -53,7 +54,12 @@ namespace Script.Player
             //Set last dir to player input
             if (movementInput.x != 0 || movementInput.y != 0)
             {
-                lastDirectioninput = movementInput;   
+                lastDirectioninput = movementInput; 
+                AudioManager.audioManagerInstance.PlayFootsteps(true);
+            }
+            else
+            {
+                AudioManager.audioManagerInstance.PlayFootsteps(false);
             }
             
             //flip sprite
@@ -71,11 +77,10 @@ namespace Script.Player
             playerAnimationController.SetAnimParamFloat(movementInput.x, "DirX");
             playerAnimationController.SetAnimParamFloat(movementInput.y, "DirY");
         }
-
+        
         public void GetMovementInput(InputAction.CallbackContext context)
         {
             movementInput = context.ReadValue<Vector2>();
         }
-        
     }
 }

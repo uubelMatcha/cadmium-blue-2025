@@ -125,10 +125,7 @@ public class MessageSystem : MonoBehaviour
         // messagePanel.SetActive(false);
         StartCoroutine(SlidePhone(0f, -900f));
         onMessageClose.Invoke();
-        if (messages.Count <= curMessageIndex)
-        {
-            isEnd = true;
-        } 
+
     }
 
     public static void ClosePopUp()
@@ -155,7 +152,12 @@ public class MessageSystem : MonoBehaviour
     //hack method for last minute, set ghostboy to active
     private void Update()
     {
-        SpawnGhostBoy();
+        if (messages.Count == curMessageIndex)
+        {
+            isEnd = true;
+            Invoke("SpawnGhostBoy", 12f);
+            curMessageIndex += 1;
+        } 
     }
 
     private void SpawnGhostBoy()

@@ -1,27 +1,35 @@
+using System;
 using UnityEngine;
 
 public class GhostBoy : MonoBehaviour
 {
 
     public GameObject text;
-    // public InteractableData data;
+   private SpriteRenderer ghostboySprite;
+   
+
+   private void Start()
+   {
+       ghostboySprite = GetComponent<SpriteRenderer>();
+   }
+
+   private void Update()
+   {
+       GameObject other = GameObject.FindGameObjectWithTag("Player");
+       //hack
+       if ((other.transform.position.y > transform.position.y) && (other.GetComponent<SpriteRenderer>() != null))
+       {
+           //higher than the ghost boy
+           ghostboySprite.sortingOrder = other.GetComponent<SpriteRenderer>().sortingOrder + 1;
+       }
+       else if(other.transform.position.y <= transform.position.y)
+       {
+           ghostboySprite.sortingOrder = other.GetComponent<SpriteRenderer>().sortingOrder - 1;
+       }
+   }
 
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-
-
-    private void OnTriggerEnter2D(Collider2D other) {
+   private void OnTriggerEnter2D(Collider2D other) {
 
         if (other.tag == "PlayerInteractionHitBox") {
             text.SetActive(true);

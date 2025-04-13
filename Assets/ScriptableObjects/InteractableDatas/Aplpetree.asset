@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b75624b2526cae648a1c72e6561fe361, type: 3}
-  m_Name: Frog
+  m_Name: Aplpetree
   m_EditorClassIdentifier: 
   itemName: 
-  level1: 
-  level2: 
-  level3: 
-  sfx: {fileID: 11400000, guid: a8fd6bb705ed5f44ba4e0fe02ceb1563, type: 2}
+  level1: "I love apple trees. They\u2019re all gnarled and spooky looking. The apples
+    usually suck, though. "
+  level2: "It\u2019s kinda witchy looking. The apples are rotting\u2026 "
+  level3: 'Apples are always poisoned in fairy tales :< '
+  sfx: {fileID: 11400000, guid: 9dadf78816dc08544b2309f8acedef04, type: 2}

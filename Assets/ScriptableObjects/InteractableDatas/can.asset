@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b75624b2526cae648a1c72e6561fe361, type: 3}
-  m_Name: Frog
+  m_Name: can
   m_EditorClassIdentifier: 
   itemName: 
-  level1: 
-  level2: 
-  level3: 
-  sfx: {fileID: 11400000, guid: a8fd6bb705ed5f44ba4e0fe02ceb1563, type: 2}
+  level1: 'I wonder how this got out here lol. How old is it? 1950?? '
+  level2: "*Kicks can* Oh. I probably shouldn\u2019t have done that. I could get
+    tetanus or something\u2026 "
+  level3: "*Kicks can* \u2026 "
+  sfx: {fileID: 11400000, guid: a5239573708c1ab41aa3b3f7ffbb2dae, type: 2}

@@ -21351,8 +21351,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   secondsBetweenMessages: 10
   messages:
+  - {fileID: 11400000, guid: 40b482576ccec9d4e99bad690dec385a, type: 2}
+  - {fileID: 11400000, guid: 00b3f122597d14547b4e6030a27e9c57, type: 2}
+  - {fileID: 11400000, guid: b71241837498e5944add84e48f7519fb, type: 2}
   - {fileID: 11400000, guid: c0b10822488dd5e42a7412425b0a3a21, type: 2}
+  - {fileID: 11400000, guid: 641ecc1f46a052c42a847918d37f6e7c, type: 2}
+  - {fileID: 11400000, guid: 7367b17b7efc48243a66ceec74e7b565, type: 2}
+  - {fileID: 11400000, guid: 88de541b1363fd34f89d9bfa16f22ee4, type: 2}
   - {fileID: 11400000, guid: bef753abdf7f0154982716f783b52d0e, type: 2}
+  - {fileID: 11400000, guid: 68147be39643f4d4cb516ac43b161aa1, type: 2}
+  - {fileID: 11400000, guid: 7eaaa511707c00c4b8d7a39dbc2bc589, type: 2}
+  - {fileID: 11400000, guid: e019bf80c0abbc0429a7deabe2390c17, type: 2}
+  - {fileID: 11400000, guid: cbd903a56b1757c44a52ed7d7225afa7, type: 2}
   curMessageIndex: 0
   messageText: {fileID: 1822104469}
   messagePanel: {fileID: 357472703}

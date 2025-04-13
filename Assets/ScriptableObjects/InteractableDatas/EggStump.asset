@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b75624b2526cae648a1c72e6561fe361, type: 3}
   m_Name: EggStump
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: stump
   level1: "Woah. Are these eyes or\u2026 eggs? That\u2019s\u2026 kinda cool. "
   level2: "\u2026 This tree stump is kind of freaking me out. Is it looking at me?  "
   level3: 'o.o '

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b75624b2526cae648a1c72e6561fe361, type: 3}
   m_Name: Flowers
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: flowers
   level1: "I think these are lilies\u2026 They\u2019re really pretty. Mom likes them. "
   level2: "I remember all the lilies at\u2026 Nevermind. Forget it. "
   level3: 'Why did it have to happen? >.< '

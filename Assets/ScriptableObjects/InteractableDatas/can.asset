@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b75624b2526cae648a1c72e6561fe361, type: 3}
   m_Name: can
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: can
   level1: 'I wonder how this got out here lol. How old is it? 1950?? '
   level2: "*Kicks can* Oh. I probably shouldn\u2019t have done that. I could get
     tetanus or something\u2026 "

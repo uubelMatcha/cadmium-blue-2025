@@ -111,6 +111,10 @@ public class AnxietySystem : MonoBehaviour
     {
         if (isBadMessage == true) {
             isTickingAnxiety = true;
+            if (AudioManager.audioManagerInstance)
+            {
+                AudioManager.audioManagerInstance.ChangeBGM("Anxiety");
+            }
             StartCoroutine(postProcessingBehaviour.HeartBeatEffect());
             ignoreButton.gameObject.SetActive(true);
         }
@@ -122,6 +126,10 @@ public class AnxietySystem : MonoBehaviour
     {
         curIgnoreClicks = 0;
         isTickingAnxiety = false;
+        if (AudioManager.audioManagerInstance)
+        {
+            AudioManager.audioManagerInstance.ChangeBGM("At_The_Campsite");
+        }
         messageOpen = false;
         ignoreButton.gameObject.SetActive(false);
         postProcessingBehaviour.panicMode = false;

@@ -5,6 +5,7 @@ using Script.Player;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class EndingSystem : MonoBehaviour
 {
@@ -14,6 +15,15 @@ public class EndingSystem : MonoBehaviour
     public Slider anxietySlider;
     public MessageSystem messageSystem;
 
+    [SerializeField] private TextMeshProUGUI  messageText;
+    [SerializeField] private UnityEngine.UI.Image profilePictureImage;
+    [SerializeField] private TextMeshProUGUI characterName;
+
+    private string[] textsToMom = new string[] {
+        "YOU: Hey mom. Sorry I just went for a walk and got a little lost… I’m coming right back. And yeah maybe we can talk about stuff.",
+        "YOU: Yay pinecone jelly sandwiches :’)"
+    };
+    public Sprite momProfile;
 
     private string[] ghostBoyDialogue = new string[] {
         "GHOST: Hey bro. What are you doing out here?",
@@ -26,17 +36,6 @@ public class EndingSystem : MonoBehaviour
     };
 
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void StartEnding() {
 
@@ -45,10 +44,10 @@ public class EndingSystem : MonoBehaviour
     
     private IEnumerator GhostBoyDialogue() {
 
-        // FindFirstObjectByType<MovementController>().enabled = false;
-        // FindFirstObjectByType<AnxietySystem>().gameObject.SetActive(false);
+        FindFirstObjectByType<MovementController>().locked = true;
 
         float sliderStartValue = anxietySlider.value;
+        float sliderCurrentValue = sliderStartValue;
 
         //Show text
         int dialogueIndex = 0;
@@ -67,54 +66,69 @@ public class EndingSystem : MonoBehaviour
                 }
                 else {
                     flavorTextUI.GetComponentInChildren<TextMeshProUGUI>().text = ghostBoyDialogue[dialogueIndex];
-                    anxietySlider.value = sliderStartValue * (1 - ((float)dialogueIndex / ghostBoyDialogue.Count()));
+                    float targetValue = sliderStartValue * (1 - ((float)dialogueIndex / ghostBoyDialogue.Count()));
+                    StartCoroutine(LerpAnxiety(sliderCurrentValue, targetValue));
+                    sliderCurrentValue = targetValue;
                 }
                 dialogueIndex += 1;
-                Debug.Log(dialogueIndex);
+                // Debug.Log(dialogueIndex);
             }
-
             yield return null;
-
         }
-
-        StartCoroutine(FadeScreenOut());
-
-        
+        StartCoroutine(FadeScreenOut());  
     }
 
-    private IEnumerator FadeScreenOut() {
 
+    private IEnumerator LerpAnxiety(float start, float end) {
 
         float timer = 0f;
 
+        while (timer < 0.5f) {
+            anxietySlider.value = Mathf.SmoothStep(start, end, timer / 0.5f);
+
+            timer += Time.deltaTime;
+            yield return null;
+        }
+    }
+
+    private IEnumerator FadeScreenOut() {
+        float timer = 0f;
         while (timer < 2f) {
 
             blackScreen.color = new Color(0f,0f,0f, timer / 2f);
 
             timer += Time.deltaTime;
             yield return null;
-
         }
-
-        // StartCoroutine(MomTextScene());
-
+        StartCoroutine(MomTextScene());
     }
 
 
-    // private IEnumerator MomTextScene() {
-
-    //     messageSystem.SlidePhone(-900f, 0f);
-
-    //     for (int i = 0; i < 2; i++) {
+    private IEnumerator MomTextScene() {
 
 
+        messageText.text = textsToMom[0];
+        characterName.text = "Mom";
+        profilePictureImage.sprite = momProfile;
 
+        StartCoroutine(messageSystem.SlidePhone(-900f, 0f));
 
+        int i = 0;
 
-    //     }
-
-
-
-    // }
+        while (i < 2) {
+            if (Input.GetKeyDown(KeyCode.Space)) {
+                if (i == 0) {
+                    messageText.text = textsToMom[1];
+                }
+                if (i == 1) {
+                    StartCoroutine(messageSystem.SlidePhone(0f,-1000f));
+                }
+                i += 1;
+            }
+            yield return null;
+        }
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene("CreditsScene");
+    }
 
 }

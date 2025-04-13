@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 3}
-  m_SizeDelta: {x: 300, y: 255.2}
+  m_AnchoredPosition: {x: 0, y: -5}
+  m_SizeDelta: {x: 330, y: 255.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3620064209947306921
 CanvasRenderer:
@@ -65,10 +65,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Where are you??
+  m_text: 'Oh nvm I heard from Tony you''re camping with your mom this weekend! I''ll
+    see you when you get back I guess haha. Say hi to some frogs for me :)) '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f2f17d8abd5fd7e4090d8488ebf50af5, type: 2}
+  m_sharedMaterial: {fileID: 7297424025434873495, guid: f2f17d8abd5fd7e4090d8488ebf50af5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -171,7 +172,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.0025024414, y: 28.5}
-  m_SizeDelta: {x: 122, y: 122}
+  m_SizeDelta: {x: 128, y: 128}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5316114286702133622
 CanvasRenderer:
@@ -535,7 +536,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -70}
+  m_AnchoredPosition: {x: 0, y: -66}
   m_SizeDelta: {x: 280, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3366076653556269162
@@ -566,10 +567,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Name
+  m_text: Mariana
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f2f17d8abd5fd7e4090d8488ebf50af5, type: 2}
+  m_sharedMaterial: {fileID: 7297424025434873495, guid: f2f17d8abd5fd7e4090d8488ebf50af5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -808,7 +809,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 525, y: 815}
+  m_SizeDelta: {x: 550, y: 873}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5982892094950218923
 CanvasRenderer:
@@ -950,15 +951,15 @@ RectTransform:
   m_GameObject: {fileID: 6200092508839399289}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.68, y: 0.68, z: 0.68}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 882813971335569673}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0, y: 203}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -0, y: 187}
+  m_SizeDelta: {x: 176, y: 196}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4231626126693323939
 CanvasRenderer:
@@ -1034,8 +1035,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -280, y: 137}
-  m_SizeDelta: {x: 425, y: 95}
+  m_AnchoredPosition: {x: -345, y: 151}
+  m_SizeDelta: {x: 431, y: 4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4791718405658495442
 CanvasRenderer:
@@ -1321,7 +1322,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: -263.5, y: 311.5}
-  m_SizeDelta: {x: 382, y: 326}
+  m_SizeDelta: {x: 390, y: 340}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5175013645800425844
 CanvasRenderer:

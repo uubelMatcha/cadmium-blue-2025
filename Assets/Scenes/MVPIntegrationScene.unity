@@ -3620,6 +3620,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7153606667292618240, guid: b886dbf8386f04a889fb26efdfab3a62, type: 3}
   m_PrefabInstance: {fileID: 1583801202}
   m_PrefabAsset: {fileID: 0}
+--- !u!224 &1650888859 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 8016885931530627845, guid: d3bd9064ec536467da7ff3bc4176710a, type: 3}
+  m_PrefabInstance: {fileID: 357472701}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1653738917
 GameObject:
   m_ObjectHideFlags: 0
@@ -4980,7 +4985,7 @@ MonoBehaviour:
   anxietyLevel: 0
   anxietySlider: {fileID: 357472704}
   ignoreButton: {fileID: 357472702}
-  ignoreButtonCompletionMask: {fileID: 0}
+  ignoreButtonCompletionMask: {fileID: 1650888859}
   maxIgnoreButtonScale: 1.5
   ignoreButtonRelaxTime: 0.25
 --- !u!114 &2042082985

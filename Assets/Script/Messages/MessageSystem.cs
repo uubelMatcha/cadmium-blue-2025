@@ -83,7 +83,7 @@ public class MessageSystem : MonoBehaviour
 
         // Notification popup
         notificationPopup.SetActive(true);
-        while (delay < curMessage.dismissTime )
+        while (delay < 1 )
         {
             if(messageCheck != curMessage)
                 yield break;

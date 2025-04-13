@@ -112,7 +112,7 @@ public class EndingSystem : MonoBehaviour
     {
         if (AudioManager.audioManagerInstance)
         {
-            AudioManager.audioManagerInstance.ChangeBGM("Pinecone_Jelly");
+            //AudioManager.audioManagerInstance.ChangeBGM("Pinecone_Jelly");
         }
 
         messageText.text = textsToMom[0];

@@ -73,7 +73,12 @@ namespace Script.Player
             }
             
             //flip sprite
-            playerSpriteRenderer.flipX = lastDirectioninput.x > 0;
+            playerSpriteRenderer.flipX = lastDirectioninput switch
+            {
+                {x: > 0, y: 0} => true,
+                {x: < 0, y: < 0} => true,
+                _ => false
+            };
             
             
             //get last position of player for facing idle direction
@@ -92,5 +97,6 @@ namespace Script.Player
         {
             movementInput = context.ReadValue<Vector2>();
         }
+        
     }
 }

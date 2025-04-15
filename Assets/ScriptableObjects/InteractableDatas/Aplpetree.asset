@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b75624b2526cae648a1c72e6561fe361, type: 3}
+  m_Name: Aplpetree
+  m_EditorClassIdentifier: 
+  itemName: appletree
+  level1: "I love apple trees. They\u2019re all gnarled and spooky looking. The apples
+    usually suck, though. "
+  level2: "It\u2019s kinda witchy looking. The apples are rotting\u2026 "
+  level3: 'Apples are always poisoned in fairy tales :< '
+  sfx: {fileID: 11400000, guid: 9dadf78816dc08544b2309f8acedef04, type: 2}

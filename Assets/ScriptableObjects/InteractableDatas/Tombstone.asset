@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b75624b2526cae648a1c72e6561fe361, type: 3}
+  m_Name: Tombstone
+  m_EditorClassIdentifier: 
+  itemName: tombstone
+  level1: "Woahh, I wonder how long this has been out here. It\u2019s sort of spooky.
+    But not in a bad way. "
+  level2: "I wonder what the world will be like when I\u2019m long gone like this. "
+  level3: 'Just reminds me how the worms get us all :( '
+  sfx: {fileID: 11400000, guid: fc3061f4f54d95747b3e488108205e43, type: 2}

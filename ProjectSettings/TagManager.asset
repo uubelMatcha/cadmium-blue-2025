@@ -2,8 +2,12 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-  serializedVersion: 2
-  tags: []
+  serializedVersion: 3
+  tags:
+  - LevelManager
+  - Director
+  - PlayerInteractionHitBox
+  - DeadBrother
   layers:
   - Default
   - TransparentFX
@@ -41,6 +45,24 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 3194061309
+    locked: 0
+  - name: Foreground
+    uniqueID: 3925834761
+    locked: 0
+  - name: Environment
+    uniqueID: 390891423
+    locked: 0
+  - name: Objects
+    uniqueID: 2104299407
+    locked: 0
+  - name: Player
+    uniqueID: 4170708593
+    locked: 0
+  - name: Environment_Above_Player
+    uniqueID: 1337385317
+    locked: 0
   m_RenderingLayers:
   - Default
   - Light Layer 1
@@ -50,27 +72,3 @@ TagManager:
   - Light Layer 5
   - Light Layer 6
   - Light Layer 7
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 

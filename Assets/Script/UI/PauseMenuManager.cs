@@ -26,14 +26,21 @@ public class PauseMenuManager : MonoBehaviour
     
     private void Update()
     {
+        /* remove debug used for behaviour jam
         if (Input.GetKeyDown(KeyCode.R))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
         
+        
         if(Input.GetKeyDown(KeyCode.T))
         {
             player.transform.position = teleportLocation.position;
+        }
+        */
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
         }
     }
 }

@@ -8,6 +8,7 @@ public class MainMenuManager : MonoBehaviour
     [Header("Buttons")]
     [SerializeField] private Button startButton;
     [SerializeField] private Button settingsMenuButton;
+    [SerializeField] private Button exitButton;
 
     [Header("Next Scene")]
     [SerializeField] private string gameSceneName;
@@ -36,13 +37,19 @@ public class MainMenuManager : MonoBehaviour
     {
         startButton.onClick.AddListener(StartGame);
         settingsMenuButton.onClick.AddListener(OpenSettingsMenu);
-
+        exitButton.onClick.AddListener(QuitGame);
+        
         CloseSettingsMenu();
     }
 
     private void StartGame()
     {
         SceneManager.LoadScene(gameSceneName);
+    }
+
+    private void QuitGame()
+    {
+        Application.Quit();
     }
     
     private void OpenSettingsMenu()

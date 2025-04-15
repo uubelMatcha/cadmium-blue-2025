@@ -1110,6 +1110,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startButton: {fileID: 1831865714}
   settingsMenuButton: {fileID: 1314838646}
+  exitButton: {fileID: 1171388705}
   gameSceneName: LevelIntegration
   mainMenuPanel: {fileID: 541756943}
   settingsPanel: {fileID: 2006877474}

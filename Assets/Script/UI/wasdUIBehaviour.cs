@@ -1,5 +1,5 @@
 using Script.Player;
-using UnityEditor.SceneManagement;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class wasdUIBehaviour : MonoBehaviour

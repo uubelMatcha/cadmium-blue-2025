@@ -69,7 +69,7 @@ public class PlayerInteraction : MonoBehaviour
         }
 
 
-        if (currentData == null) {
+        if (currentData is null) {
             // Debug.Log("Data is null");
             return;
         }

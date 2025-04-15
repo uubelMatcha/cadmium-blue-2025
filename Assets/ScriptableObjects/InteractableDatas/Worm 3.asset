@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b75624b2526cae648a1c72e6561fe361, type: 3}
   m_Name: Worm 3
   m_EditorClassIdentifier: 
-  itemName: 
-  level1: 
-  level2: 
-  level3: 
+  itemName: bug3
+  level1: What are you guys doing back here?
+  level2: I wonder if these bugs have always been here, like forever
+  level3: It just fits, I guess...
   sfx: {fileID: 11400000, guid: fd4a05d849c63e24aa97d16674ae9a94, type: 2}

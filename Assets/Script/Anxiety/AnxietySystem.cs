@@ -79,6 +79,7 @@ public class AnxietySystem : MonoBehaviour
     [Header("UI Elements")]
     [SerializeField] private Slider anxietySlider;
     [SerializeField] private Button ignoreButton;
+    [SerializeField] private GameObject ignoreButtonSlider;
     [SerializeField] private RectTransform ignoreButtonCompletionMask;
 
 
@@ -96,6 +97,8 @@ public class AnxietySystem : MonoBehaviour
     private void Start()
     {
         ignoreButton.gameObject.SetActive(false);
+        ignoreButtonSlider.SetActive(false);
+
         MessageSystem.Instance.onMessageOpen += OnMessageOpen;
         MessageSystem.Instance.onMessageClose += ResetSystem;
         // MessageSystem.Instance.onMessageCloseDelayPassed += OnMessageCloseDelayPassed;
@@ -113,8 +116,10 @@ public class AnxietySystem : MonoBehaviour
                 AudioManager.audioManagerInstance.PlayAnxietyMusic("Anxiety", true);
             }
             StartCoroutine(postProcessingBehaviour.HeartBeatEffect());
-            ignoreButton.gameObject.SetActive(true);
+            ignoreButtonSlider.SetActive(true);
         }
+
+        ignoreButton.gameObject.SetActive(true);
         messageOpen = true;
         curIgnoreClicks = 0;
     }

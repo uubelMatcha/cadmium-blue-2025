@@ -75,7 +75,7 @@ public class MessageSystem : MonoBehaviour
 
     private IEnumerator OpenPopUpAfterSeconds()
     {
-        InitializeNextPopUp();
+        Invoke(nameof(InitializeNextPopUp), 1f);
         yield return new WaitForSecondsRealtime(secondsBetweenMessages);
         
         float delay = 0;
